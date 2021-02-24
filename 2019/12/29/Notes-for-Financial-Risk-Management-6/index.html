@@ -1,0 +1,398 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Financial Risk Management Chapter 6：Market Risk | Accelerator086</title><meta name="keywords" content="Financial Mathematics,Undergraduate,Financial Risk Management"><meta name="author" content="Accelerator086"><meta name="copyright" content="Accelerator086"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="金融风险管理 &amp; 风险模型及应用 Chapter 6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Financial Risk Management Chapter 6：Market Risk">
+<meta property="og:url" content="http://example.com/2019/12/29/Notes-for-Financial-Risk-Management-6/index.html">
+<meta property="og:site_name" content="Accelerator086">
+<meta property="og:description" content="金融风险管理 &amp; 风险模型及应用 Chapter 6">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/pic/15888928.jpg">
+<meta property="article:published_time" content="2019-12-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-02-23T13:13:09.570Z">
+<meta property="article:author" content="Accelerator086">
+<meta property="article:tag" content="Financial Mathematics">
+<meta property="article:tag" content="Undergraduate">
+<meta property="article:tag" content="Financial Risk Management">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/pic/15888928.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2019/12/29/Notes-for-Financial-Risk-Management-6/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":800,"languages":{"author":"作者: Accelerator086","link":"链接: ","source":"来源: Accelerator086","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2021-02-23 21:13:09'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}const fontSizeVal = saveToLocal.get('global-font-size')
+if (fontSizeVal !== undefined) {
+  document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+}})()</script><style type="text/css">#toggle-sidebar {left:100px}</style><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/pic/15888928.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">21</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/selftalk/"><i class="fa-fw fas fa-heart"></i><span> Selftalk</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://personal-blog-waline.vercel.app/ui"><i class="fa-fw fas fa-suitcase"></i><span> Backstage</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="no-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Accelerator086</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/selftalk/"><i class="fa-fw fas fa-heart"></i><span> Selftalk</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://personal-blog-waline.vercel.app/ui"><i class="fa-fw fas fa-suitcase"></i><span> Backstage</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Financial Risk Management Chapter 6：Market Risk</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-12-28T16:00:00.000Z" title="发表于 2019-12-29 00:00:00">2019-12-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-23T13:13:09.570Z" title="更新于 2021-02-23 21:13:09">2021-02-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Financial-Risk-Management/">Financial Risk Management</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div><article class="post-content" id="article-container"><ol>
+<li><p>市场风险：有关主体在金融市场上从事金融产品、金融衍生品交易时，因金融产品、金融衍生品的市场价格发生意外变动，而蒙受经济损失的可能性。市场风险属于投机风险，包括利率风险、汇率风险和投资风险。 </p>
+<ul>
+<li>利率风险的形态：重新定价风险、基准风险、收益曲线风险、期权风险。</li>
+<li>（待补充）</li>
+<li>市场风险的要素：<ul>
+<li>风险因素：从事金融产品或金融衍生品交易；</li>
+<li>风险事故：金融产品或金融衍生品的市场价格发生意外变动；</li>
+<li>经济损失可能性：影响交易成本或收益。  </li>
+</ul>
+</li>
+<li><p>市场风险的评估：</p>
+<ul>
+<li><p>灵敏度法：利用金融资产价值对决定其的市场因子（利率、汇率、股价、商品价格等）的敏感性来计量金融资产市场风险。</p>
+<ul>
+<li><p>灵敏度：若市场因子变化1个百分点，导致金融资产价值变化的百分点数。</p>
+</li>
+<li><p>金融资产的市场风险与灵敏度成正比，灵敏度越大，金融资产价值受市场因子的影响就越大，从而市场风险就越大。</p>
+</li>
+<li><p>灵敏度法只在金融资产价值同市场因子的变化呈线性关系时才成立，若市场因资金发生微小变化，则这些金融资产价值同市场因子的变化可以近似呈现线性关系。</p>
+</li>
+</ul>
+<ul>
+<li><p>假定金融资产价值P由n个市场因子<script type="math/tex">x_{i},(i=1,2,...,n)</script>决定，即<script type="math/tex">P=P(x_{i})</script>，<script type="math/tex">x_i</script>发生变化导致的P的变化为</p>
+<script type="math/tex; mode=display">
+\frac{\Delta P}{P}=\sum_{i=1}^n {D_i\Delta x_i}</script><p>其中<script type="math/tex">D_i</script>为金融资产价值对相应的市场因子的灵敏度。</p>
+</li>
+<li><p>灵敏度可定义为</p>
+<script type="math/tex; mode=display">
+D_i=\frac{1}{P}·\frac{\partial P}{\partial x_i}\quad (i=1,2,..,n)</script></li>
+</ul>
+</li>
+<li><p>利率敏感性缺口（Interest Rate Sensitive Gap，IRSG）：利率敏感性资产（Interest Rate Sensitive Assets，IRSA）与利率敏感性负债（Interest Rate Sensitive Liabilities，IRSL）之间的差额。即<script type="math/tex">IRSG=IRSA-IRSL</script>。</p>
+<p>  <img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230223320985.png" alt=""></p>
+<p>  <img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230223334876.png" alt=""></p>
+<p>  <img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230223346943.png" alt=""></p>
+<p>  <img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230223402040.png" alt=""></p>
+<ul>
+<li><p>利率敏感性缺口的评价：</p>
+<p><img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230223433886.png" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>久期、凸性：</p>
+<ul>
+<li><p>久期：采用加权平均法计算的债券的平均到期时间。</p>
+</li>
+<li><p>假设一个T年期的债券，t为债券产生现金流的各个时期<script type="math/tex">(1 \leq t \leq T)</script>，<script type="math/tex">C_t</script>为t时期的现金流，y为贴现率（即市场利率），P为债券价格，则债券的定价公式：</p>
+<script type="math/tex; mode=display">
+P=\sum_{t=1}^T {\frac{C_t}{(1+y)^t}}</script><p>可得到久期计算公式：</p>
+<script type="math/tex; mode=display">
+D=\sum_{t=1}^n {t*w_t}=\sum_{t=1}^n {t*\frac{\frac{c_t}{(1+y)^t}}{\sum_{t=1}^T {\frac{C_t}{(1+y)^t}}}}\\
+=\frac{1}{P}\sum_{t=1}^T {t*\frac{C_t}{(1+y)^t}}</script></li>
+<li><p>特点：</p>
+<p><img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230224001749.png" alt=""></p>
+</li>
+<li><p><strong>Example</strong>：</p>
+<p><img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230224030335.png" alt=""></p>
+</li>
+<li><p>基于久期的债券价格利率敏感性度量：（市场利率很小时，忽略不计）</p>
+<script type="math/tex; mode=display">
+ \frac{1}{P}\frac{dP}{dy}=-\frac{D}{1+y}</script><p>此时，债券组合的久期等于<u>该组合各个债券久期的加权平均</u>，权重为<u>该债券在组合中所占的比例</u>（按照价值来算）。</p>
+</li>
+</ul>
+<ul>
+<li><p>修正久期：考虑市场利率的基础上的修正。</p>
+<script type="math/tex; mode=display">
+  D^*=-\frac{1}{P}\frac{dP}{dy}=\frac{D}{1+y}</script></li>
+</ul>
+<p><strong>Example</strong>：</p>
+<p><img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230224615592.png" alt=""></p>
+<p><img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230224626920.png" alt=""></p>
+<ul>
+<li><p>有效久期：在利率水平发生特定变化的情况下债券价格变动的百分比</p>
+<script type="math/tex; mode=display">
+  ED=\frac{P_{-\Delta y}-P_{+\Delta y}}{2P_0}</script><p>  其中<script type="math/tex">P\_{-\Delta y}</script>为市场利率下降x个基点时的债券价格，<script type="math/tex">P\_{+\Delta y}</script>为市场利率上升x个基点时的债券价格，<script type="math/tex">P_0</script>为初始债券价格。</p>
+</li>
+<li><p>久期缺口模型：商业银行既有生息资产，也有付息负债。在生息资产和付息负债的久期不相等时，就存在利率风险敞口，可以用久期缺口（Duration Gap，DG）来表示。</p>
+<script type="math/tex; mode=display">
+  DG=D_A-\frac{P_L}{P_A}D_L</script><p>  其中$D_A,D_L$分别为生息资产、负债的久期，$P_A,P_L$分别为生息资产、负债的价值，两者相比为资产负债率，小于1。</p>
+<p> <img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230225242723.png" alt=""></p>
+<p> <strong>Example</strong>：</p>
+<p> <img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230225307043.png" alt=""></p>
+<ul>
+<li><p>久期模型的评价：</p>
+<p><img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230225329127.png" alt=""></p>
+</li>
+<li><p>凸性：若市场利率下降某一较大数值，则债券价格的上涨值会大于市场利率上升统一较大数值时债券价格的下跌值，此时债券价格的变动与市场利率的变动之间就呈现出凸性关系。</p>
+<ul>
+<li>数学上，凸性是对债券价格利率敏感度的二阶导数，是对债券久期敏感度性的度量。</li>
+</ul>
+<script type="math/tex; mode=display">
+C=-\frac{dD^*}{dy}=\frac{1}{P}\frac{d^2P}{dy^2}=\frac{1}{P}\frac{1}{(1+y)^2}\sum_{t=1}^T {\frac{t(t+1)C_t}{(1+y)^2}}</script><ul>
+<li><p>几何意义上，凸性是对债券价格/市场利率曲线的弯曲程度的度量，描述因市场利率发生较大变动而导致债券价格变动幅度的变动程度。</p>
+</li>
+<li><p>债券价格的实际变动率可以用Taylor展开求出：</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+\frac{dP}{P}=\frac{1}{P}\frac{dP}{dy}+\frac{1}{2}\frac{1}{P}\frac{d^2P}{dy^2}(dy)^2=-D^*dy+\frac{1}{2}C*(dy)^2</script><p>上述公式右侧第一项是由债券久期得出的债券价格变动率，第二项是由图形的出的债券价格变动率。</p>
+<p><strong>Example</strong>：</p>
+<p><img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230230054966.png" alt=""></p>
+<p><strong>Example</strong>：</p>
+<p><img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230230149115.png" alt=""></p>
+<p><strong>Example</strong>：</p>
+<p><img src="https://github.com/Accelerator086/accelerator086.github.io/raw/master/img/financial-risk-management-photos/image-20191230230211510.png" alt=""></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:accelerator086@outlook.com">Accelerator</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2019/12/29/Notes-for-Financial-Risk-Management-6/">http://example.com/2019/12/29/Notes-for-Financial-Risk-Management-6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Accelerator086</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Financial-Mathematics/">Financial Mathematics</a><a class="post-meta__tags" href="/tags/Undergraduate/">Undergraduate</a><a class="post-meta__tags" href="/tags/Financial-Risk-Management/">Financial Risk Management</a></div><div class="post_share"><div class="social-share" data-image="/pic/15888928.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/12/29/Notes-for-Financial-Risk-Management-3/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Financial Risk Management Chapter 3：Financial Risk Recognization</div></div></a></div><div class="next-post pull-right"><a href="/2019/12/29/Notes-for-Financial-Risk-Management-4/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Financial Risk Management Chapter 4：Financial Risk Measurement</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/pic/15888928.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Accelerator086</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">21</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Accelerator086"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Accelerator086" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:accelerator086@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/accelerator_086" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://weibo.com/accelerator086" target="_blank" title="Weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://steamcommunity.com/id/accelerator086" target="_blank" title="Steam"><i class="fab fa-steam"></i></a><a class="social-icon" href="https://www.quora.com/profile/Accelerator086" target="_blank" title="Quora"><i class="fab fa-quora"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">I know nothing.</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/02/23/Mathematical-Statistics/" title="Mathematical Statistics"><img src="/pic/Standard_Normal_Distribution.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mathematical Statistics"/></a><div class="content"><a class="title" href="/2021/02/23/Mathematical-Statistics/" title="Mathematical Statistics">Mathematical Statistics</a><time datetime="2021-02-22T16:00:00.000Z" title="发表于 2021-02-23 00:00:00">2021-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/05/07/2020%E8%80%83%E7%A0%94%E4%B8%80%E6%88%98%E6%80%BB%E7%BB%93/" title="2020考研一战总结"><img src="/pic/new_folder3/427408.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2020考研一战总结"/></a><div class="content"><a class="title" href="/2020/05/07/2020%E8%80%83%E7%A0%94%E4%B8%80%E6%88%98%E6%80%BB%E7%BB%93/" title="2020考研一战总结">2020考研一战总结</a><time datetime="2020-05-06T16:00:00.000Z" title="发表于 2020-05-07 00:00:00">2020-05-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/13/CSGO-Config/" title="CSGO CFG文件配置"><img src="/pic/new_folder3/wallhaven-435rld.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CSGO CFG文件配置"/></a><div class="content"><a class="title" href="/2020/04/13/CSGO-Config/" title="CSGO CFG文件配置">CSGO CFG文件配置</a><time datetime="2020-04-12T16:00:00.000Z" title="发表于 2020-04-13 00:00:00">2020-04-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/12/Python-Codes/" title="Python代码整合"><img src="/pic/new_folder3/wallhaven-5wwzq5.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python代码整合"/></a><div class="content"><a class="title" href="/2020/04/12/Python-Codes/" title="Python代码整合">Python代码整合</a><time datetime="2020-04-11T16:00:00.000Z" title="发表于 2020-04-12 00:00:00">2020-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/10/Donald-Trump-Victory-Speech/" title="Trump 胜选美国总统演讲稿"><img src="/pic/new_folder3/wallhaven-r76pqm.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Trump 胜选美国总统演讲稿"/></a><div class="content"><a class="title" href="/2020/04/10/Donald-Trump-Victory-Speech/" title="Trump 胜选美国总统演讲稿">Trump 胜选美国总统演讲稿</a><time datetime="2020-04-09T16:00:00.000Z" title="发表于 2020-04-10 00:00:00">2020-04-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By Accelerator086</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    loader: {
+      source: {
+        '[tex]/amsCd': '[tex]/amscd'
+      }
+    },
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        addClass: [200,() => {
+          document.querySelectorAll('mjx-container:not([display=\'true\']').forEach( node => {
+            const target = node.parentNode
+            if (!target.classList.contains('has-jax')) {
+              target.classList.add('mathjax-overflow')
+            }
+          })
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      placeholder: 'Please leave your footprints',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'en',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign(initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="aplayer no-destroy" data-id="621150623" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script></div></body></html>
