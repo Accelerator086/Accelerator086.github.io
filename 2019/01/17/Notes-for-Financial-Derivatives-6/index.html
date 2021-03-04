@@ -155,191 +155,288 @@
 <p>《An Elementary Introduction to Mathematical Finance》Chapter 7</p>
 <p>《The Mathematics of Finance: Modeling and Hedging》Chapter 5-6</p>
 <p>《Mathematics for Finance: An Introduction to Financial Engineering》Chapter 8.3</p>
-<p>《Handbook of Financial Engineering: Using Derivatives to Manage Risk》Chapter<br>10-11</p>
+<p>《Handbook of Financial Engineering: Using Derivatives to Manage Risk》Chapter 10-11</p>
 </blockquote>
-<h2 id="Introduction-to-the-B-S-Formula-Using-Risk-Neutral-Method"><a href="#Introduction-to-the-B-S-Formula-Using-Risk-Neutral-Method" class="headerlink" title="Introduction to the B-S Formula: Using Risk-Neutral Method"></a>Introduction to the B-S Formula: Using Risk-Neutral Method</h2><script type="math/tex; mode=display">
-c = S_{0}N\left( d_{1} \right) - Xe^{- \text{rT}}N\left( d_{2} \right)</script><p>其中：</p>
-<script type="math/tex; mode=display">
-d_{1} = \frac{\ln\left( \frac{S_{0}}{X} \right) + \left( r + \frac{\sigma^{2}}{2} \right)T}{\sigma\sqrt{T}}</script><script type="math/tex; mode=display">
-d_{2} = \frac{\ln\left( \frac{S_{0}}{X} \right) + \left( r - \frac{\sigma^{2}}{2} \right)T}{\sigma\sqrt{T}} = d_{1} - \sigma\sqrt{T}</script><p>且$N\left( x \right)$ 表示标准正态分布$N\left( 0,1 \right)$的概率值</p>
-<h3 id="推导B-S-Formula："><a href="#推导B-S-Formula：" class="headerlink" title="推导B-S Formula："></a>推导B-S Formula：</h3><p>Suppose：假设股票的连续收益率满足布朗运动，即股票价格满足几何布朗运动<script type="math/tex">Z\sim N( 0,1 )</script></p>
-<script type="math/tex; mode=display">
+<h2 id="introduction-to-the-b-s-formula-using-risk-neutral-method">Introduction to the B-S Formula: Using Risk-Neutral Method</h2>
+<p><span class="math display">\[
+c = S_{0}N\left( d_{1} \right) - Xe^{- \text{rT}}N\left( d_{2} \right)
+\]</span></p>
+<p>其中：</p>
+<p><span class="math display">\[
+d_{1} = \frac{\ln\left( \frac{S_{0}}{X} \right) + \left( r + \frac{\sigma^{2}}{2} \right)T}{\sigma\sqrt{T}}
+\]</span></p>
+<p><span class="math display">\[
+d_{2} = \frac{\ln\left( \frac{S_{0}}{X} \right) + \left( r - \frac{\sigma^{2}}{2} \right)T}{\sigma\sqrt{T}} = d_{1} - \sigma\sqrt{T}
+\]</span></p>
+<p>且<span class="math inline">\(N\left( x \right)\)</span> 表示标准正态分布<span class="math inline">\(N\left( 0,1 \right)\)</span>的概率值</p>
+<h3 id="推导b-s-formula">推导B-S Formula：</h3>
+<p>Suppose：假设股票的连续收益率满足布朗运动，即股票价格满足几何布朗运动<span class="math display">\[
+Z\sim N( 0,1 )\]</span> <span class="math display">\[
 \begin{matrix}
 S\left( t \right) = S_{0}e^{\left( r - \frac{\sigma^{2}}{2} \right)t + \sigma\sqrt{t}Z} \\
-\end{matrix}</script><p>随机模型：</p>
-<script type="math/tex; mode=display">
-\Longrightarrow \ln(\frac{S\left( t \right)}{S\left( 0 \right)}) = (r - \frac{\sigma^{2}}{2})t + \sigma\sqrt{t}Z</script><p>利用风险中性定价方法：</p>
-<script type="math/tex; mode=display">
-c = e^{- \text{rT}}E_{Q}{\max(S(T) - X,0)}</script><p>引入示性函数</p>
-<script type="math/tex; mode=display">
+\end{matrix}
+\]</span></p>
+<p>随机模型：</p>
+<p><span class="math display">\[
+\Longrightarrow \ln(\frac{S\left( t \right)}{S\left( 0 \right)}) = (r - \frac{\sigma^{2}}{2})t + \sigma\sqrt{t}Z
+\]</span></p>
+<p>利用风险中性定价方法：</p>
+<p><span class="math display">\[
+c = e^{- \text{rT}}E_{Q}{\max(S(T) - X,0)}
+\]</span></p>
+<p>引入示性函数</p>
+<p><span class="math display">\[
 I_{A}\left( w \right) = \left\{\begin{matrix}
-\ 1,w \in A = \{ w|S(t,w) > X\} \\
+\ 1,w \in A = \{ w|S(t,w) &gt; X\} \\
 \ 0,w \notin A \\
-\end{matrix} \right.\</script><script type="math/tex; mode=display">
-\max(S(t,w) - x,0) = (S(t,w) - x)^{+} = I_{A}(w)(S(t,w) - x)</script><script type="math/tex; mode=display">
-S\left( T \right) = S_{0}e^{\left( r - \frac{\sigma^{2}}{2} \right)t + \sigma\sqrt{t}Z} > X</script><script type="math/tex; mode=display">
-\Longrightarrow Z > \frac{1}{\sigma\sqrt{t}}\left( \ln\frac{X}{S_{0}} - \left( r - \frac{\sigma^{2}}{2} \right)t \right) = d_{2}</script><p>设</p>
-<script type="math/tex; mode=display">
+\end{matrix} \right.\
+\]</span></p>
+<p><span class="math display">\[
+\max(S(t,w) - x,0) = (S(t,w) - x)^{+} = I_{A}(w)(S(t,w) - x)
+\]</span></p>
+<p><span class="math display">\[
+S\left( T \right) = S_{0}e^{\left( r - \frac{\sigma^{2}}{2} \right)t + \sigma\sqrt{t}Z} &gt; X
+\]</span></p>
+<p><span class="math display">\[
+\Longrightarrow Z &gt; \frac{1}{\sigma\sqrt{t}}\left( \ln\frac{X}{S_{0}} - \left( r - \frac{\sigma^{2}}{2} \right)t \right) = d_{2}
+\]</span></p>
+<p>设</p>
+<p><span class="math display">\[
 I_{A}\left( w \right) = \left\{ \begin{matrix}
-\ 1,Z(w) > d_{2} \\
+\ 1,Z(w) &gt; d_{2} \\
 \ 0,\text{else} \\
-\end{matrix} \right.\</script><p>由于</p>
-<script type="math/tex; mode=display">
-E_{Q}I_{A} = P\left( S\left( t \right) > X \right) = P\left( Z > d_{2} \right) = 1 - P\left( Z \leq - d_{2} \right) = 1 - \Phi\left( - d_{2} \right) = \Phi\left( d_{2} \right)</script><p>故</p>
-<script type="math/tex; mode=display">
-e^{- \text{rt}}E_{Q}\left( I_{A}\left( S\left( t \right) \right) \right) = S_{0}\Phi\left( d_{1} \right)</script><p>其中</p>
-<script type="math/tex; mode=display">
-d_{1} = d_{2} + \sigma\sqrt{t} = \frac{1}{\sigma\sqrt{t}}\left( \ln\frac{S_{0}}{X} + \left( r + \frac{\sigma^{2}}{2} \right)t \right)</script><p>将上述代入风险中性定价公式可推出B-S Model</p>
-<h2 id="B-S-Formula-推广："><a href="#B-S-Formula-推广：" class="headerlink" title="B-S Formula 推广："></a>B-S Formula 推广：</h2><h3 id="European-put-option："><a href="#European-put-option：" class="headerlink" title="European put option："></a>European put option：</h3><p>根据欧式期权平价关系：</p>
-<script type="math/tex; mode=display">
-C + Xe^{- \text{rt}} = P + S</script><p>故我们推出</p>
-<script type="math/tex; mode=display">
-p = Xe^{- \text{rT}}N\left( - d_{2} \right) - S_{0}N\left( - d_{1} \right)</script><p>其中<script type="math/tex">d_{1},d_{2}</script>与上述公式意义相同</p>
-<h4 id="波动率-sigma计算"><a href="#波动率-sigma计算" class="headerlink" title="波动率\sigma计算"></a>波动率<script type="math/tex">\sigma</script>计算</h4><script type="math/tex; mode=display">
-\ln S_{t}\left( w \right) - \ln S_{0}\sim N\lbrack(r - \frac{\sigma^{2}}{2})t,\sigma^{2}t\rbrack</script><ul>
-<li><p>历史波动率：首先计算对数收益率，其次计算样本标准差，最后按年进行标准化。</p>
-</li>
-<li><p>隐含波动率：利用市场期权的报价及B—S公式，插值代入计算。</p>
-</li>
-<li><p>指数加权波动率：利用最近时刻的波动率及以前不同时刻波动率的加权和。</p>
-</li>
+\end{matrix} \right.\
+\]</span></p>
+<p>由于</p>
+<p><span class="math display">\[
+E_{Q}I_{A} = P\left( S\left( t \right) &gt; X \right) = P\left( Z &gt; d_{2} \right) = 1 - P\left( Z \leq - d_{2} \right) = 1 - \Phi\left( - d_{2} \right) = \Phi\left( d_{2} \right)
+\]</span></p>
+<p>故</p>
+<p><span class="math display">\[
+e^{- \text{rt}}E_{Q}\left( I_{A}\left( S\left( t \right) \right) \right) = S_{0}\Phi\left( d_{1} \right)
+\]</span></p>
+<p>其中</p>
+<p><span class="math display">\[
+d_{1} = d_{2} + \sigma\sqrt{t} = \frac{1}{\sigma\sqrt{t}}\left( \ln\frac{S_{0}}{X} + \left( r + \frac{\sigma^{2}}{2} \right)t \right)
+\]</span></p>
+<p>将上述代入风险中性定价公式可推出B-S Model</p>
+<h2 id="b-s-formula-推广">B-S Formula 推广：</h2>
+<h3 id="european-put-option">European put option：</h3>
+<p>根据欧式期权平价关系： <span class="math display">\[
+C + Xe^{- \text{rt}} = P + S
+\]</span></p>
+<p>故我们推出</p>
+<p><span class="math display">\[
+p = Xe^{- \text{rT}}N\left( - d_{2} \right) - S_{0}N\left( - d_{1} \right)
+\]</span></p>
+<p>其中<span class="math display">\[d_{1},d_{2}\]</span>与上述公式意义相同</p>
+<h4 id="波动率sigma计算">波动率<span class="math display">\[\sigma\]</span>计算</h4>
+<p><span class="math display">\[
+\ln S_{t}\left( w \right) - \ln S_{0}\sim N\lbrack(r - \frac{\sigma^{2}}{2})t,\sigma^{2}t\rbrack
+\]</span></p>
+<ul>
+<li><p>历史波动率：首先计算对数收益率，其次计算样本标准差，最后按年进行标准化。</p></li>
+<li><p>隐含波动率：利用市场期权的报价及B—S公式，插值代入计算。</p></li>
+<li><p>指数加权波动率：利用最近时刻的波动率及以前不同时刻波动率的加权和。</p></li>
 </ul>
-<h4 id="界定二叉树模型中的参数"><a href="#界定二叉树模型中的参数" class="headerlink" title="界定二叉树模型中的参数"></a>界定二叉树模型中的参数</h4><script type="math/tex; mode=display">
-u = e^{\sigma\sqrt{\frac{T}{N}}\ } \text{with probability } p = \frac{1}{2}\left( 1 + \frac{\mu}{\sigma}\sqrt{\frac{T}{N}} \right)</script><script type="math/tex; mode=display">
-d = \frac{1}{u}\text{with probability } p = \frac{1}{2}\left( 1 - \frac{\mu}{\sigma}\sqrt{\frac{T}{N}} \right)</script><script type="math/tex; mode=display">
-\text{while }\Delta t = \frac{T}{N}</script><h4 id="有离散红利的欧式期权的B-S公式"><a href="#有离散红利的欧式期权的B-S公式" class="headerlink" title="有离散红利的欧式期权的B-S公式"></a>有离散红利的欧式期权的B-S公式</h4><p>用股票的市场价格减去股票在期权到期日之前分配的红利的现值作为股价代入到B-S公式中，从而得到欧式期权的价值。</p>
-<p>即：</p>
-<script type="math/tex; mode=display">
-c=(S_0-D)N(\overline{d_1})-Xe^{-rt}N(\overline{d_2})</script><p>其中</p>
-<script type="math/tex; mode=display">
-\overline{d_1} = \frac{\ln\left( \frac{S_{0} - D}{X} \right) + \left( r + \frac{\sigma^{2}}{2} \right)t}{\sigma\sqrt{t}}</script><script type="math/tex; mode=display">
-\overline{d_2} = \overline{d_1}- \sigma\sqrt{t}</script><h4 id="有连续红利率收益的欧式股票期权的B-S公式、欧式股票指数期权定价公式"><a href="#有连续红利率收益的欧式股票期权的B-S公式、欧式股票指数期权定价公式" class="headerlink" title="有连续红利率收益的欧式股票期权的B-S公式、欧式股票指数期权定价公式"></a>有连续红利率收益的欧式股票期权的B-S公式、欧式股票指数期权定价公式</h4><p>在定价标的股票支付连续红利的欧式期权时，可以把它当作标的股票不支付红利的欧式期权，只要用<script type="math/tex">S_{0}e^{-
-\text{qT}}</script>替代当前股价即可</p>
-<p>即：</p>
-<script type="math/tex; mode=display">
-c = S_{0}e^{- \text{qT}}N\left( d_{1} \right) - Xe^{- \text{rT}}N\left( d_{2} \right)</script><p>其中</p>
-<script type="math/tex; mode=display">
-d_{1} = \frac{\ln\left( \frac{S_{0}}{X} \right) + \left( r - q + \frac{\sigma^{2}}{2} \right)T}{\sigma\sqrt{T}}</script><script type="math/tex; mode=display">
-d_{2} = d_{1} - \sigma\sqrt{T}</script><h4 id="加曼－科尔哈根外汇期权定价公式"><a href="#加曼－科尔哈根外汇期权定价公式" class="headerlink" title="加曼－科尔哈根外汇期权定价公式"></a>加曼－科尔哈根外汇期权定价公式</h4><script type="math/tex; mode=display">
-c = s_{0}e^{- r_{e}T}N\left( d_{1} \right) - Xe^{- r_{c}T}N\left( d_{2} \right)</script><script type="math/tex; mode=display">
-d_{1} = \frac{\ln(\frac{s_{0}e^{- r_{e}T}}{X}) + \{ r_{c} + \frac{\sigma^{2}}{2}\} T}{\sigma\sqrt{T}}</script><script type="math/tex; mode=display">
-d_{2} = d_{1} - \sigma\sqrt{T}</script><p>其中<script type="math/tex">r_{e}</script>表示基础货币的利率，<script type="math/tex">r_{c}</script>表示报价货币的利率。</p>
-<h4 id="期货期权——Black定价模型（1976）"><a href="#期货期权——Black定价模型（1976）" class="headerlink" title="期货期权——Black定价模型（1976）"></a>期货期权——Black定价模型（1976）</h4><p>假设期货价格过程为</p>
-<script type="math/tex; mode=display">
-dF = \mu Fdt + \sigma Fdz</script><p>假定期货合约和期权合约同时到期，在连续红利的期权定价公式中，用期货价格代替股票价格，并且用无风险利率 r 替代红利率 q ，就得到期货期权的定价公式</p>
-<script type="math/tex; mode=display">
-c = e^{- \text{rT}}\left\lbrack F_{0}N\left( d_{1} \right) - XN\left( d_{2} \right) \right\rbrack</script><script type="math/tex; mode=display">
-p = e^{- \text{rT}}\left\lbrack XN\left( - d_{2} \right) - F_{0}N\left( - d_{1} \right) \right\rbrack</script><p>其中</p>
-<script type="math/tex; mode=display">
-d_{1} = \frac{\ln\left( \frac{F_{0}}{X} \right) + \frac{\sigma^{2}T}{2}}{\sigma\sqrt{T}}</script><script type="math/tex; mode=display">
-d_{2} = \frac{\ln\left( \frac{F_{0}}{X} \right) - \frac{\sigma^{2}T}{2}}{\sigma\sqrt{T}} = d_{1} - \sigma\sqrt{T}</script><h2 id="B-S-Formula-Using-Ito-Lemma"><a href="#B-S-Formula-Using-Ito-Lemma" class="headerlink" title="B-S Formula: Using Itō Lemma"></a>B-S Formula: Using Itō Lemma</h2><p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331153839.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331153847.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331153855.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331153906.png" alt=""></p>
-<h2 id="B-S-Formula-希腊字母的表示"><a href="#B-S-Formula-希腊字母的表示" class="headerlink" title="B-S Formula 希腊字母的表示"></a>B-S Formula 希腊字母的表示</h2><h4 id="期权的希腊字母“兄弟会”："><a href="#期权的希腊字母“兄弟会”：" class="headerlink" title="期权的希腊字母“兄弟会”："></a>期权的希腊字母“兄弟会”：</h4><ul>
-<li><p>Delta 值: 期权对资产价格的变化率</p>
-</li>
-<li><p>Gamma值： Delta对资产价格的变化率</p>
-</li>
-<li>Vega值 ：期权对资产价格波动率的变化率</li>
-<li>Rho值： 期权对利率的变化率</li>
-<li>Theta值: 期权对时间的变化率</li>
+<h4 id="界定二叉树模型中的参数">界定二叉树模型中的参数</h4>
+<p><span class="math display">\[
+u = e^{\sigma\sqrt{\frac{T}{N}}\ } \text{with probability } p = \frac{1}{2}\left( 1 + \frac{\mu}{\sigma}\sqrt{\frac{T}{N}} \right)
+\]</span></p>
+<p><span class="math display">\[
+d = \frac{1}{u}\text{with probability } p = \frac{1}{2}\left( 1 - \frac{\mu}{\sigma}\sqrt{\frac{T}{N}} \right)
+\]</span></p>
+<p><span class="math display">\[
+\text{while }\Delta t = \frac{T}{N}
+\]</span></p>
+<h4 id="有离散红利的欧式期权的b-s公式">有离散红利的欧式期权的B-S公式</h4>
+<p>用股票的市场价格减去股票在期权到期日之前分配的红利的现值作为股价代入到B-S公式中，从而得到欧式期权的价值。</p>
+<p>即： <span class="math display">\[
+c=(S_0-D)N(\overline{d_1})-Xe^{-rt}N(\overline{d_2})
+\]</span></p>
+<p>其中</p>
+<p><span class="math display">\[
+\overline{d_1} = \frac{\ln\left( \frac{S_{0} - D}{X} \right) + \left( r + \frac{\sigma^{2}}{2} \right)t}{\sigma\sqrt{t}}
+\]</span></p>
+<p><span class="math display">\[
+\overline{d_2} = \overline{d_1}- \sigma\sqrt{t}
+\]</span></p>
+<h4 id="有连续红利率收益的欧式股票期权的b-s公式欧式股票指数期权定价公式">有连续红利率收益的欧式股票期权的B-S公式、欧式股票指数期权定价公式</h4>
+<p>在定价标的股票支付连续红利的欧式期权时，可以把它当作标的股票不支付红利的欧式期权，只要用<span class="math display">\[S_{0}e^{-
+\text{qT}}\]</span>替代当前股价即可</p>
+<p>即： <span class="math display">\[
+c = S_{0}e^{- \text{qT}}N\left( d_{1} \right) - Xe^{- \text{rT}}N\left( d_{2} \right)
+\]</span></p>
+<p>其中</p>
+<p><span class="math display">\[
+d_{1} = \frac{\ln\left( \frac{S_{0}}{X} \right) + \left( r - q + \frac{\sigma^{2}}{2} \right)T}{\sigma\sqrt{T}}
+\]</span></p>
+<p><span class="math display">\[
+d_{2} = d_{1} - \sigma\sqrt{T}
+\]</span></p>
+<h4 id="加曼科尔哈根外汇期权定价公式">加曼－科尔哈根外汇期权定价公式</h4>
+<p><span class="math display">\[
+c = s_{0}e^{- r_{e}T}N\left( d_{1} \right) - Xe^{- r_{c}T}N\left( d_{2} \right)
+\]</span></p>
+<p><span class="math display">\[
+d_{1} = \frac{\ln(\frac{s_{0}e^{- r_{e}T}}{X}) + \{ r_{c} + \frac{\sigma^{2}}{2}\} T}{\sigma\sqrt{T}}
+\]</span></p>
+<p><span class="math display">\[
+d_{2} = d_{1} - \sigma\sqrt{T}
+\]</span></p>
+<p>其中<span class="math display">\[r_{e}\]</span>表示基础货币的利率，<span class="math display">\[r_{c}\]</span>表示报价货币的利率。</p>
+<h4 id="期货期权black定价模型1976">期货期权——Black定价模型（1976）</h4>
+<p>假设期货价格过程为 <span class="math display">\[
+dF = \mu Fdt + \sigma Fdz
+\]</span></p>
+<p>假定期货合约和期权合约同时到期，在连续红利的期权定价公式中，用期货价格代替股票价格，并且用无风险利率 r 替代红利率 q ，就得到期货期权的定价公式</p>
+<p><span class="math display">\[
+c = e^{- \text{rT}}\left\lbrack F_{0}N\left( d_{1} \right) - XN\left( d_{2} \right) \right\rbrack
+\]</span></p>
+<p><span class="math display">\[
+p = e^{- \text{rT}}\left\lbrack XN\left( - d_{2} \right) - F_{0}N\left( - d_{1} \right) \right\rbrack
+\]</span></p>
+<p>其中</p>
+<p><span class="math display">\[
+d_{1} = \frac{\ln\left( \frac{F_{0}}{X} \right) + \frac{\sigma^{2}T}{2}}{\sigma\sqrt{T}}
+\]</span></p>
+<p><span class="math display">\[
+d_{2} = \frac{\ln\left( \frac{F_{0}}{X} \right) - \frac{\sigma^{2}T}{2}}{\sigma\sqrt{T}} = d_{1} - \sigma\sqrt{T}
+\]</span></p>
+<h2 id="b-s-formula-using-itō-lemma">B-S Formula: Using Itō Lemma</h2>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331153839.png" /></p>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331153847.png" /></p>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331153855.png" /></p>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331153906.png" /></p>
+<h2 id="b-s-formula-希腊字母的表示">B-S Formula 希腊字母的表示</h2>
+<h4 id="期权的希腊字母兄弟会">期权的希腊字母“兄弟会”：</h4>
+<ul>
+<li><p>Delta 值: 期权对资产价格的变化率</p></li>
+<li><p>Gamma值： Delta对资产价格的变化率</p></li>
+<li><p>Vega值 ：期权对资产价格波动率的变化率</p></li>
+<li><p>Rho值： 期权对利率的变化率</p></li>
+<li><p>Theta值: 期权对时间的变化率</p></li>
 </ul>
-<p>以看涨期权为例，无分红情况下，首先我们有</p>
-<script type="math/tex; mode=display">
-C = C\left( X,S_{0},R,\sigma,T \right) = e^{- rT}E\left( I_{A}\left( S_{T} - X \right) \right)</script><p>在B-S Formula 下我们有</p>
-<script type="math/tex; mode=display">
-C = C\left( X,S_{0},R,\sigma,T \right) = S_{0}N\left( d_{1} \right) - Xe^{- rT}N\left( d_{2} \right)</script><p>则希腊字母：</p>
+<p>以看涨期权为例，无分红情况下，首先我们有 <span class="math display">\[
+C = C\left( X,S_{0},R,\sigma,T \right) = e^{- rT}E\left( I_{A}\left( S_{T} - X \right) \right)
+\]</span></p>
+<p>在B-S Formula 下我们有</p>
+<p><span class="math display">\[
+C = C\left( X,S_{0},R,\sigma,T \right) = S_{0}N\left( d_{1} \right) - Xe^{- rT}N\left( d_{2} \right)
+\]</span></p>
+<p>则希腊字母：</p>
 <ul>
 <li>Delta</li>
 </ul>
-<script type="math/tex; mode=display">
-\Delta = \frac{\partial C}{\partial S_{0}} = N\left( d_{1} \right)</script><ul>
+<p><span class="math display">\[
+\Delta = \frac{\partial C}{\partial S_{0}} = N\left( d_{1} \right)
+\]</span></p>
+<ul>
 <li>Gamma</li>
 </ul>
-<script type="math/tex; mode=display">
-\Gamma = \frac{\partial^{2}C}{\partial S_{0}^{2}} = N^{'}\left( d_{1} \right)\frac{1}{S_{0}\sigma\sqrt{T}}</script><ul>
+<p><span class="math display">\[
+\Gamma = \frac{\partial^{2}C}{\partial S_{0}^{2}} = N^{&#39;}\left( d_{1} \right)\frac{1}{S_{0}\sigma\sqrt{T}}
+\]</span></p>
+<ul>
 <li>Theta</li>
 </ul>
-<script type="math/tex; mode=display">
-\Theta = \frac{\partial C}{\partial T} = \frac{\sigma}{2\sqrt{T}}S_{0}N^{'}\left( d_{1} \right) + Xre^{- rT}N\left( d_{2} \right)</script><ul>
+<p><span class="math display">\[
+\Theta = \frac{\partial C}{\partial T} = \frac{\sigma}{2\sqrt{T}}S_{0}N^{&#39;}\left( d_{1} \right) + Xre^{- rT}N\left( d_{2} \right)
+\]</span></p>
+<ul>
 <li>Vega</li>
 </ul>
-<script type="math/tex; mode=display">
-V = \frac{\partial C}{\partial\sigma} = S_{0}\sqrt{T}N^{'}\left( d_{1} \right)</script><ul>
+<p><span class="math display">\[
+V = \frac{\partial C}{\partial\sigma} = S_{0}\sqrt{T}N^{&#39;}\left( d_{1} \right)
+\]</span></p>
+<ul>
 <li>Rho</li>
 </ul>
-<script type="math/tex; mode=display">
-\rho = \frac{\partial C}{\partial r} = XTe^{- rT}N\left( d_{2} \right)</script><p>对于看跌期权希腊字母计算同理，详见《数量金融》第7章。</p>
-<p>如下需注意，对于Theta值，上述内容按照《An Elementary Introduction to<br>Mathematical Finance》导出，而下述内容中的时间T则被替换为T-t,Theta值的求导为<script type="math/tex">\frac{\partial C}{\partial t}</script></p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154658.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154706.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154706.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154713.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154627.png" alt=""></p>
-<h2 id="期权的套期保值技术、对冲策略"><a href="#期权的套期保值技术、对冲策略" class="headerlink" title="期权的套期保值技术、对冲策略"></a>期权的套期保值技术、对冲策略</h2><h4 id="套期保值比率"><a href="#套期保值比率" class="headerlink" title="套期保值比率"></a>套期保值比率</h4><p>资产组合价值为S，套期保值产品价值为F，在套期保值期限内新组合V头寸的价值变化为</p>
-<script type="math/tex; mode=display">
-\Delta V = \Delta S - h\text{ΔF}</script><p>商品期货和股指期货通常要求套期保值头寸价格变化的方差最小。</p>
-<h4 id="套期保值中性技术"><a href="#套期保值中性技术" class="headerlink" title="套期保值中性技术"></a>套期保值中性技术</h4><ul>
-<li><p>Delta 中性：资产组合的 Delta＝0</p>
-</li>
-<li><p>Gamma中性:资产组合的 Gamma ＝0</p>
-</li>
-<li><p>Vega中性值:资产组合的 Vega ＝0</p>
-</li>
+<p><span class="math display">\[
+\rho = \frac{\partial C}{\partial r} = XTe^{- rT}N\left( d_{2} \right)
+\]</span></p>
+<p>对于看跌期权希腊字母计算同理，详见《数量金融》第7章。</p>
+<p>如下需注意，对于Theta值，上述内容按照《An Elementary Introduction to Mathematical Finance》导出，而下述内容中的时间T则被替换为T-t,Theta值的求导为<span class="math display">\[\frac{\partial C}{\partial t}\]</span></p>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154658.png" /></p>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154706.png" /></p>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154706.png" /></p>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154713.png" /></p>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154627.png" /></p>
+<h2 id="期权的套期保值技术对冲策略">期权的套期保值技术、对冲策略</h2>
+<h4 id="套期保值比率">套期保值比率</h4>
+<p>资产组合价值为S，套期保值产品价值为F，在套期保值期限内新组合V头寸的价值变化为 <span class="math display">\[
+\Delta V = \Delta S - h\text{ΔF}
+\]</span></p>
+<p>商品期货和股指期货通常要求套期保值头寸价格变化的方差最小。</p>
+<h4 id="套期保值中性技术">套期保值中性技术</h4>
+<ul>
+<li><p>Delta 中性：资产组合的 Delta＝0</p></li>
+<li><p>Gamma中性:资产组合的 Gamma ＝0</p></li>
+<li><p>Vega中性值:资产组合的 Vega ＝0</p></li>
 </ul>
 <p>意义：在金融变量微小变化条件，保证资产组合的价值不受影响</p>
-<h4 id="Delta中性："><a href="#Delta中性：" class="headerlink" title="Delta中性："></a>Delta中性：</h4><p>假如V是一个有风险的资产组合，如果V为Delta中性的资产组合。那么它的价值不随资产价格的微小变化而变化（一般在短时间内）。通常当<script type="math/tex">\Delta>0</script>称资产组合具有牛市倾向；<script type="math/tex">\Delta < 0</script>称资产组合具有熊市倾向。</p>
+<h4 id="delta中性">Delta中性：</h4>
+<p>假如V是一个有风险的资产组合，如果V为Delta中性的资产组合。那么它的价值不随资产价格的微小变化而变化（一般在短时间内）。通常当<span class="math display">\[\Delta&gt;0\]</span>称资产组合具有牛市倾向；<span class="math display">\[\Delta &lt; 0\]</span>称资产组合具有熊市倾向。</p>
 <p>价值依赖于标的资产S的资产组合P的Delta值等于其各个资产的Delta值的线性组合，其组合系数为其成员的头寸（或个数）。</p>
 <p>组合的Delta值= 各资产的头寸×各资产的Delta值</p>
 <p>当资产组合不具有Delta中性时，可以调整资产组合中各个资产的头寸分配。实现Delta中性，比例的配置通常也称为套期保值比率。</p>
-<h4 id="Gamma中性："><a href="#Gamma中性：" class="headerlink" title="Gamma中性："></a>Gamma中性：</h4><p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154113.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154125.png" alt=""></p>
-<h4 id="Vega中性："><a href="#Vega中性：" class="headerlink" title="Vega中性："></a>Vega中性：</h4><p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154220.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154215.png" alt=""></p>
-<h4 id="套期保值率"><a href="#套期保值率" class="headerlink" title="套期保值率"></a>套期保值率</h4><p>套期保值率(hedge ratio)为对冲某期权带来的价格风险所需持有的股票数目，即上述的Delta值。套期保值率又称为期权的Delta。</p>
+<h4 id="gamma中性">Gamma中性：</h4>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154113.png" /></p>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154125.png" /></p>
+<h4 id="vega中性">Vega中性：</h4>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154220.png" /></p>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154215.png" /></p>
+<h4 id="套期保值率">套期保值率</h4>
+<p>套期保值率(hedge ratio)为对冲某期权带来的价格风险所需持有的股票数目，即上述的Delta值。套期保值率又称为期权的Delta。</p>
 <p>完全套期保值：股票多头和相应期权的空头（或相反）构成的组合，能将股票价格波动的全部风险对冲掉。</p>
 <p>看涨期权套期保值率= N (d1)</p>
 <p>看跌期权套期保值率= N (d1) – 1</p>
-<p>因为<script type="math/tex">N\left( d_{1}
-\right)</script>是一个概率值，其大小在0-1之间。因此，对应每份卖出的看涨期权需要拥有的股票数量也应在0-1之间，即在构建一个套期保值头寸时，股票的数量一定小于期权的份数。</p>
-<p>因为<script type="math/tex">N\left( d_{1} \right) < 1</script>，所以期权价格的变动小于股票价格的变动。</p>
-<h2 id="投资组合保险策略Portfolio-Insurance"><a href="#投资组合保险策略Portfolio-Insurance" class="headerlink" title="投资组合保险策略Portfolio Insurance"></a>投资组合保险策略Portfolio Insurance</h2><ul>
-<li><p>组合保险策略核心思想是，通过使用静态或者动态资产配置策略，将股票组合损失锁定在一定范围内，同时仍致力追求股市上涨时带来的收益。</p>
-</li>
+<p>因为<span class="math display">\[N\left( d_{1}
+\right)\]</span>是一个概率值，其大小在0-1之间。因此，对应每份卖出的看涨期权需要拥有的股票数量也应在0-1之间，即在构建一个套期保值头寸时，股票的数量一定小于期权的份数。</p>
+<p>因为<span class="math display">\[N\left( d_{1} \right) &lt; 1\]</span>，所以期权价格的变动小于股票价格的变动。</p>
+<h2 id="投资组合保险策略portfolio-insurance">投资组合保险策略Portfolio Insurance</h2>
+<ul>
+<li><p>组合保险策略核心思想是，通过使用静态或者动态资产配置策略，将股票组合损失锁定在一定范围内，同时仍致力追求股市上涨时带来的收益。</p></li>
 <li><p>根据策略设计依据不同，组合保险策略可分为两大类：</p>
 <p>一类是依据Black、Scholes(B-S,1973)提出的期权定价公式所衍生出的基于期权的组合保险策略(option-based portfolio insurance，OBPI) ，包括欧式保护性卖权策略、复制性卖权策略；</p>
-<p>另一类则是依据投资者本身风险偏好以及承风险担能力设定一些简单的参数所形成的组合保险策略，包括固定比例组合保险策略(constant<br>proportion portfolio insurance，CPPI) 、时间不变性组合保险策略(time-invariant<br>portfolio protection，TIPP) 。</p>
+<p>另一类则是依据投资者本身风险偏好以及承风险担能力设定一些简单的参数所形成的组合保险策略，包括固定比例组合保险策略(constant proportion portfolio insurance，CPPI) 、时间不变性组合保险策略(time-invariant portfolio protection，TIPP) 。</p>
 <blockquote>
 <p>For Example：</p>
 <p>1）“90/10”策略：将10%的投资资金购买看涨期权，90%的资金用于货币市场投资，直到看涨期权到期为止。</p>
 <p>2）抛补看涨期权策略：买入一种股票同时卖出一个该股票的看涨期权，即股票多头＋看涨期权空头。采取该策略的投资者，往往是那些对自己投资组合中某些行情看涨的股票持中立态度，并且为获得股票价格下降保护而愿意限制可能的股价上升所带来的收益的投资者。</p>
-<p>3）静态投资组合保险策略：设定一个T时刻的收益下限<script type="math/tex">\phi</script>，将<script type="math/tex">\phi \cdot e^{- r (T - t)}</script>投资于无风险资产，稳定连续获利r，然后将剩余资金投资于有风险的投资组合。将所有投资置于有风险的投资组合中，当有风险投资组合的价值降为<script type="math/tex">\phi e^{- r \cdot (T - t)}</script>时，所有资产都投资于无风险资产中。</p>
-</blockquote>
-</li>
+<p>3）静态投资组合保险策略：设定一个T时刻的收益下限<span class="math display">\[\phi\]</span>，将<span class="math display">\[\phi \cdot e^{- r (T - t)}\]</span>投资于无风险资产，稳定连续获利r，然后将剩余资金投资于有风险的投资组合。将所有投资置于有风险的投资组合中，当有风险投资组合的价值降为<span class="math display">\[\phi e^{- r \cdot (T - t)}\]</span>时，所有资产都投资于无风险资产中。</p>
+</blockquote></li>
 <li><p>OBPI: option-based portfolio insurance基于期权的组合保险策略</p>
 <p>保护性看跌期权：风险性资产＋欧式看跌期权，即将资金投资于风险性资产和以其为标的资产的欧式看跌期权，以保护投资组合到期价值在某特定值以上。这种策略并不需要进行调整，不过如果市场上没有对应的看跌期权存在，则必须用合成的方式来复制期权的策略。</p>
 <p>对于一个股票组合，若采取欧式保护性卖权策略进行组合保险，一般操作策略是分别购买以要保护股票组合中个股为标的物的卖权，以锁定股票组合潜在损失。对于没有期权市场的国家，例如我国，在实务操作中就无法使用欧式保护性卖权策略。</p>
 <p>投资组合经理运用股指期货保护股票投资组合，以防股市下跌。基金经理在股票贬值时卖出指数期货，而不是实际抛售股票；如果股市继续下跌，投资组合经理以较低的价格重新买入指数期货，用所得利润弥补股票投资组合的亏损。</p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154353.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154357.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154403.png" alt=""></p>
-</li>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154353.png" /></p>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154357.png" /></p>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154403.png" /></p></li>
 <li><p>CPPI: constant proportion portfolio insurance固定比例组合保险策略</p>
 <p>思想：假定下限与乘数(m)的选择在保险期间是不变的。投资于股票的资产数量等于总资产与最低要求保险额度之差，即“缓冲额度”，乘以一个固定的风险乘数m（m大于1，且风险乘数越大表示投资者的风险偏好程度越高，因为当最低要求保险额度一定时，风险乘数越大，投资于风险资产的比例越大）。</p>
 <p>所以固定比例投资组合保险策略涉及的参数有三个——最低要求保险额度、风险乘数和资产组合动态调整频率，前两个参数是投资者根据自身风险偏好程度设定的，调整频率在一定程度上反映了投资者对市场收益率波动性的关注，因而也与投资者的风险偏好相关。</p>
 <p>理论上，当市场存在较大的波动时，及时调整有助于提高保险策略的效果，但是，在实务中，市场收益率的短期波动往往并不能提供有价值的信息，对投资者的决策并没有指导意义，且频繁调整资产配置比例会带来较大的交易费用。</p>
 <p>当风险资产价格降低（升高），风险资产头寸也降低（升高），一旦达到下限值，将只投资于无风险债券。因此CPPI策略的收益曲线为凸。</p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154428.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154435.png" alt=""></p>
-</li>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154428.png" /></p>
+<p><img src="https://raw.githubusercontent.com/Accelerator086/accelerator086-image-upload/master/20200331154435.png" /></p></li>
 </ul>
-<h2 id="Black-Scholes-Formula-using-Monte-Carlo-Method-Valuation"><a href="#Black-Scholes-Formula-using-Monte-Carlo-Method-Valuation" class="headerlink" title="Black-Scholes Formula using Monte-Carlo Method: Valuation"></a>Black-Scholes Formula using Monte-Carlo Method: Valuation</h2><h3 id="European-Option"><a href="#European-Option" class="headerlink" title="European Option"></a>European Option</h3><script type="math/tex; mode=display">C_0=e^{-rT}E_0\{\max(S_T-K,0)\}=e^{-rT}\int_0^{+\infty}h(s)q(s)ds</script><script type="math/tex; mode=display">\widetilde{C_0}=e^{-rT}\frac{1}{I} \sum_{i=1}^I \max(\widetilde{S_T^i}-K)</script><p>其中 $\widetilde{S_T^i}$ 为到期日的第 $i$ 个模拟指数水平。</p>
-<h4 id="静态模拟方法："><a href="#静态模拟方法：" class="headerlink" title="静态模拟方法："></a>静态模拟方法：</h4><script type="math/tex; mode=display">S_T= S_{0}e^{\left( r - \frac{\sigma^{2}}{2} \right)t + \sigma\sqrt{t}Z} \\ C_0=e^{-rT}E_0\{\max(S_T-K,0)\}</script><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S0 = <span class="number">100.</span></span><br><span class="line">r = <span class="number">0.05</span></span><br><span class="line">sigma = <span class="number">0.25</span></span><br><span class="line">T = <span class="number">1.0</span></span><br><span class="line">I = <span class="number">50000</span> <span class="comment">#模拟5e5次</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gbm_mcs_stat</span>(<span class="params">K</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27; Valuation of European call option in Black-Scholes-Merton</span></span><br><span class="line"><span class="string">    by Monte Carlo simulation (of index level at maturity)</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Parameters</span></span><br><span class="line"><span class="string">    ==========</span></span><br><span class="line"><span class="string">    K: float</span></span><br><span class="line"><span class="string">        (positive) strike price of the option</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Returns</span></span><br><span class="line"><span class="string">    =======</span></span><br><span class="line"><span class="string">    C0: float</span></span><br><span class="line"><span class="string">        estimated present value of European call option</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    z=np.random.standard_normal(I)</span><br><span class="line">    </span><br><span class="line">    ST = S0 * np.exp((r - <span class="number">0.5</span> * sigma ** <span class="number">2</span>) * T + sigma * math.sqrt(T) * z)</span><br><span class="line">    <span class="comment"># calculate payoff at maturity</span></span><br><span class="line">    hT = np.maximum(ST - K, <span class="number">0</span>)</span><br><span class="line">    <span class="comment"># calculate MCS estimator</span></span><br><span class="line">    C0 = math.exp(-r * T) * np.mean(hT)</span><br><span class="line">    <span class="keyword">return</span> C0</span><br></pre></td></tr></table></figure>
+<h2 id="black-scholes-formula-using-monte-carlo-method-valuation">Black-Scholes Formula using Monte-Carlo Method: Valuation</h2>
+<h3 id="european-option">European Option</h3>
+<p><span class="math display">\[C_0=e^{-rT}E_0\{\max(S_T-K,0)\}=e^{-rT}\int_0^{+\infty}h(s)q(s)ds\]</span></p>
+<p><span class="math display">\[\widetilde{C_0}=e^{-rT}\frac{1}{I} \sum_{i=1}^I \max(\widetilde{S_T^i}-K)\]</span></p>
+<p>其中 <span class="math inline">\(\widetilde{S_T^i}\)</span> 为到期日的第 <span class="math inline">\(i\)</span> 个模拟指数水平。</p>
+<h4 id="静态模拟方法">静态模拟方法：</h4>
+<p><span class="math display">\[S_T= S_{0}e^{\left( r - \frac{\sigma^{2}}{2} \right)t + \sigma\sqrt{t}Z} \\ C_0=e^{-rT}E_0\{\max(S_T-K,0)\}\]</span></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S0 = <span class="number">100.</span></span><br><span class="line">r = <span class="number">0.05</span></span><br><span class="line">sigma = <span class="number">0.25</span></span><br><span class="line">T = <span class="number">1.0</span></span><br><span class="line">I = <span class="number">50000</span> <span class="comment">#模拟5e5次</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gbm_mcs_stat</span>(<span class="params">K</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27; Valuation of European call option in Black-Scholes-Merton</span></span><br><span class="line"><span class="string">    by Monte Carlo simulation (of index level at maturity)</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Parameters</span></span><br><span class="line"><span class="string">    ==========</span></span><br><span class="line"><span class="string">    K: float</span></span><br><span class="line"><span class="string">        (positive) strike price of the option</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Returns</span></span><br><span class="line"><span class="string">    =======</span></span><br><span class="line"><span class="string">    C0: float</span></span><br><span class="line"><span class="string">        estimated present value of European call option</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    z=np.random.standard_normal(I)</span><br><span class="line">    </span><br><span class="line">    ST = S0 * np.exp((r - <span class="number">0.5</span> * sigma ** <span class="number">2</span>) * T + sigma * math.sqrt(T) * z)</span><br><span class="line">    <span class="comment"># calculate payoff at maturity</span></span><br><span class="line">    hT = np.maximum(ST - K, <span class="number">0</span>)</span><br><span class="line">    <span class="comment"># calculate MCS estimator</span></span><br><span class="line">    C0 = math.exp(-r * T) * np.mean(hT)</span><br><span class="line">    <span class="keyword">return</span> C0</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">gbm_mcs_stat(K=<span class="number">105.</span>)  <span class="comment">#行权价为105.0</span></span><br></pre></td></tr></table></figure>
-<pre><code>10.044221852841922
-</code></pre><h4 id="动态模拟方法："><a href="#动态模拟方法：" class="headerlink" title="动态模拟方法："></a>动态模拟方法：</h4><h5 id="纯Python"><a href="#纯Python" class="headerlink" title="纯Python"></a>纯Python</h5><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Monte Carlo valuation of European call options with pure Python</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> exp, sqrt, log</span><br><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> gauss, seed</span><br><span class="line"></span><br><span class="line">seed(<span class="number">20000</span>)</span><br><span class="line">t0 = time()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Parameters</span></span><br><span class="line">S0 = <span class="number">100.</span>  <span class="comment"># initial value</span></span><br><span class="line">K = <span class="number">105.</span>  <span class="comment"># strike price</span></span><br><span class="line">T = <span class="number">1.0</span>  <span class="comment"># maturity</span></span><br><span class="line">r = <span class="number">0.05</span>  <span class="comment"># riskless short rate</span></span><br><span class="line">sigma = <span class="number">0.2</span>  <span class="comment"># volatility</span></span><br><span class="line">M = <span class="number">50</span>  <span class="comment"># number of time steps</span></span><br><span class="line">dt = T / M  <span class="comment"># length of time interval</span></span><br><span class="line">I = <span class="number">250000</span>  <span class="comment"># number of paths</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Simulating I paths with M time steps</span></span><br><span class="line">S = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(I):</span><br><span class="line">    path = []</span><br><span class="line">    <span class="keyword">for</span> t <span class="keyword">in</span> <span class="built_in">range</span>(M + <span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> t == <span class="number">0</span>:</span><br><span class="line">            path.append(S0)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            z = gauss(<span class="number">0.0</span>, <span class="number">1.0</span>) <span class="comment"># 生成标准正态分布随机数</span></span><br><span class="line">            St = path[t - <span class="number">1</span>] * exp((r - <span class="number">0.5</span> * sigma ** <span class="number">2</span>) * dt + sigma * sqrt(dt) * z)</span><br><span class="line">            path.append(St)</span><br><span class="line">    S.append(path)</span><br><span class="line">    </span><br><span class="line"><span class="comment"># Calculating the Monte Carlo estimator</span></span><br><span class="line">C0 = exp(-r * T) * <span class="built_in">sum</span>([<span class="built_in">max</span>(path[-<span class="number">1</span>] - K, <span class="number">0</span>) <span class="keyword">for</span> path <span class="keyword">in</span> S]) / I</span><br><span class="line"></span><br><span class="line"><span class="comment"># Results output</span></span><br><span class="line">print(<span class="string">&quot;European Option Value %7.3f&quot;</span> % C0)</span><br></pre></td></tr></table></figure>
-<h5 id="运用Numpy库"><a href="#运用Numpy库" class="headerlink" title="运用Numpy库"></a>运用Numpy库</h5><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Monte Carlo valuation of European call options with NumPy</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">np.random.seed(<span class="number">20000</span>)</span><br><span class="line">t0 = time()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Parameters</span></span><br><span class="line">S0 = <span class="number">100.</span>; K = <span class="number">105.</span>; T = <span class="number">1.0</span>; r = <span class="number">0.05</span>; sigma = <span class="number">0.2</span></span><br><span class="line">M = <span class="number">50</span>; dt = T / M; I = <span class="number">250000</span> * <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Simulating I paths with M time steps</span></span><br><span class="line">S = np.zeros((M + <span class="number">1</span>, I))</span><br><span class="line">S[<span class="number">0</span>] = S0</span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, M + <span class="number">1</span>):</span><br><span class="line">    z = np.random.standard_normal(I)  <span class="comment"># pseudorandom numbers</span></span><br><span class="line">    z -= z.mean()  <span class="comment"># corrects 1st moment</span></span><br><span class="line">    z /= z.std()  <span class="comment"># corrects 2nd moment</span></span><br><span class="line">    S[t] = S[t - <span class="number">1</span>] * np.exp((r - <span class="number">0.5</span> * sigma ** <span class="number">2</span>) * dt + sigma * math.sqrt(dt) * z)</span><br><span class="line">      <span class="comment"># vectorized operation per time step over all paths</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Calculating the Monte Carlo estimator</span></span><br><span class="line">C0 = math.exp(-r * T) * np.<span class="built_in">sum</span>(np.maximum(S[-<span class="number">1</span>] - K, <span class="number">0</span>)) / I</span><br><span class="line"></span><br><span class="line"><span class="comment"># Results output</span></span><br><span class="line">print(<span class="string">&quot;European Option Value %7.3f&quot;</span> % C0)</span><br></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:accelerator086@outlook.com">Accelerator</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://accelerator086.github.io/2019/01/17/Notes-for-Financial-Derivatives-6/">http://accelerator086.github.io/2019/01/17/Notes-for-Financial-Derivatives-6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://accelerator086.github.io" target="_blank">Accelerator086</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Financial-Mathematics/">Financial Mathematics</a><a class="post-meta__tags" href="/tags/Undergraduate/">Undergraduate</a><a class="post-meta__tags" href="/tags/Financial-Derivatives/">Financial Derivatives</a></div><div class="post_share"><div class="social-share" data-image="/pic/15888928.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/01/17/Notes-for-Financial-Derivatives-5/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Financial Derivatives Chapter 5：Preview-Stochastic Process</div></div></a></div><div class="next-post pull-right"><a href="/2018/12/04/Quantitative-Financial-Time-Series/"><img class="next-cover" src="/pic/time-series.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Quantitative Financial Time Series</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction-to-the-B-S-Formula-Using-Risk-Neutral-Method"><span class="toc-number">1.</span> <span class="toc-text">Introduction to the B-S Formula: Using Risk-Neutral Method</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E5%AF%BCB-S-Formula%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">推导B-S Formula：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-S-Formula-%E6%8E%A8%E5%B9%BF%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">B-S Formula 推广：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#European-put-option%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">European put option：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A2%E5%8A%A8%E7%8E%87-sigma%E8%AE%A1%E7%AE%97"><span class="toc-number">2.1.1.</span> <span class="toc-text">波动率\sigma计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%95%8C%E5%AE%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E6%A8%A1%E5%9E%8B%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-number">2.1.2.</span> <span class="toc-text">界定二叉树模型中的参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E7%A6%BB%E6%95%A3%E7%BA%A2%E5%88%A9%E7%9A%84%E6%AC%A7%E5%BC%8F%E6%9C%9F%E6%9D%83%E7%9A%84B-S%E5%85%AC%E5%BC%8F"><span class="toc-number">2.1.3.</span> <span class="toc-text">有离散红利的欧式期权的B-S公式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E8%BF%9E%E7%BB%AD%E7%BA%A2%E5%88%A9%E7%8E%87%E6%94%B6%E7%9B%8A%E7%9A%84%E6%AC%A7%E5%BC%8F%E8%82%A1%E7%A5%A8%E6%9C%9F%E6%9D%83%E7%9A%84B-S%E5%85%AC%E5%BC%8F%E3%80%81%E6%AC%A7%E5%BC%8F%E8%82%A1%E7%A5%A8%E6%8C%87%E6%95%B0%E6%9C%9F%E6%9D%83%E5%AE%9A%E4%BB%B7%E5%85%AC%E5%BC%8F"><span class="toc-number">2.1.4.</span> <span class="toc-text">有连续红利率收益的欧式股票期权的B-S公式、欧式股票指数期权定价公式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E6%9B%BC%EF%BC%8D%E7%A7%91%E5%B0%94%E5%93%88%E6%A0%B9%E5%A4%96%E6%B1%87%E6%9C%9F%E6%9D%83%E5%AE%9A%E4%BB%B7%E5%85%AC%E5%BC%8F"><span class="toc-number">2.1.5.</span> <span class="toc-text">加曼－科尔哈根外汇期权定价公式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%9F%E8%B4%A7%E6%9C%9F%E6%9D%83%E2%80%94%E2%80%94Black%E5%AE%9A%E4%BB%B7%E6%A8%A1%E5%9E%8B%EF%BC%881976%EF%BC%89"><span class="toc-number">2.1.6.</span> <span class="toc-text">期货期权——Black定价模型（1976）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-S-Formula-Using-Ito-Lemma"><span class="toc-number">3.</span> <span class="toc-text">B-S Formula: Using Itō Lemma</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-S-Formula-%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-number">4.</span> <span class="toc-text">B-S Formula 希腊字母的表示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%9F%E6%9D%83%E7%9A%84%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E2%80%9C%E5%85%84%E5%BC%9F%E4%BC%9A%E2%80%9D%EF%BC%9A"><span class="toc-number">4.0.1.</span> <span class="toc-text">期权的希腊字母“兄弟会”：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%9F%E6%9D%83%E7%9A%84%E5%A5%97%E6%9C%9F%E4%BF%9D%E5%80%BC%E6%8A%80%E6%9C%AF%E3%80%81%E5%AF%B9%E5%86%B2%E7%AD%96%E7%95%A5"><span class="toc-number">5.</span> <span class="toc-text">期权的套期保值技术、对冲策略</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A5%97%E6%9C%9F%E4%BF%9D%E5%80%BC%E6%AF%94%E7%8E%87"><span class="toc-number">5.0.1.</span> <span class="toc-text">套期保值比率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A5%97%E6%9C%9F%E4%BF%9D%E5%80%BC%E4%B8%AD%E6%80%A7%E6%8A%80%E6%9C%AF"><span class="toc-number">5.0.2.</span> <span class="toc-text">套期保值中性技术</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Delta%E4%B8%AD%E6%80%A7%EF%BC%9A"><span class="toc-number">5.0.3.</span> <span class="toc-text">Delta中性：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Gamma%E4%B8%AD%E6%80%A7%EF%BC%9A"><span class="toc-number">5.0.4.</span> <span class="toc-text">Gamma中性：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Vega%E4%B8%AD%E6%80%A7%EF%BC%9A"><span class="toc-number">5.0.5.</span> <span class="toc-text">Vega中性：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A5%97%E6%9C%9F%E4%BF%9D%E5%80%BC%E7%8E%87"><span class="toc-number">5.0.6.</span> <span class="toc-text">套期保值率</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88%E4%BF%9D%E9%99%A9%E7%AD%96%E7%95%A5Portfolio-Insurance"><span class="toc-number">6.</span> <span class="toc-text">投资组合保险策略Portfolio Insurance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Black-Scholes-Formula-using-Monte-Carlo-Method-Valuation"><span class="toc-number">7.</span> <span class="toc-text">Black-Scholes Formula using Monte-Carlo Method: Valuation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#European-Option"><span class="toc-number">7.1.</span> <span class="toc-text">European Option</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%A8%A1%E6%8B%9F%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">7.1.1.</span> <span class="toc-text">静态模拟方法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E6%A8%A1%E6%8B%9F%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">7.1.2.</span> <span class="toc-text">动态模拟方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%AFPython"><span class="toc-number">7.1.2.1.</span> <span class="toc-text">纯Python</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%90%E7%94%A8Numpy%E5%BA%93"><span class="toc-number">7.1.2.2.</span> <span class="toc-text">运用Numpy库</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By Accelerator086</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+<pre><code>10.044221852841922</code></pre>
+<h4 id="动态模拟方法">动态模拟方法：</h4>
+<h5 id="纯python">纯Python</h5>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Monte Carlo valuation of European call options with pure Python</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> exp, sqrt, log</span><br><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> gauss, seed</span><br><span class="line"></span><br><span class="line">seed(<span class="number">20000</span>)</span><br><span class="line">t0 = time()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Parameters</span></span><br><span class="line">S0 = <span class="number">100.</span>  <span class="comment"># initial value</span></span><br><span class="line">K = <span class="number">105.</span>  <span class="comment"># strike price</span></span><br><span class="line">T = <span class="number">1.0</span>  <span class="comment"># maturity</span></span><br><span class="line">r = <span class="number">0.05</span>  <span class="comment"># riskless short rate</span></span><br><span class="line">sigma = <span class="number">0.2</span>  <span class="comment"># volatility</span></span><br><span class="line">M = <span class="number">50</span>  <span class="comment"># number of time steps</span></span><br><span class="line">dt = T / M  <span class="comment"># length of time interval</span></span><br><span class="line">I = <span class="number">250000</span>  <span class="comment"># number of paths</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Simulating I paths with M time steps</span></span><br><span class="line">S = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(I):</span><br><span class="line">    path = []</span><br><span class="line">    <span class="keyword">for</span> t <span class="keyword">in</span> <span class="built_in">range</span>(M + <span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> t == <span class="number">0</span>:</span><br><span class="line">            path.append(S0)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            z = gauss(<span class="number">0.0</span>, <span class="number">1.0</span>) <span class="comment"># 生成标准正态分布随机数</span></span><br><span class="line">            St = path[t - <span class="number">1</span>] * exp((r - <span class="number">0.5</span> * sigma ** <span class="number">2</span>) * dt + sigma * sqrt(dt) * z)</span><br><span class="line">            path.append(St)</span><br><span class="line">    S.append(path)</span><br><span class="line">    </span><br><span class="line"><span class="comment"># Calculating the Monte Carlo estimator</span></span><br><span class="line">C0 = exp(-r * T) * <span class="built_in">sum</span>([<span class="built_in">max</span>(path[-<span class="number">1</span>] - K, <span class="number">0</span>) <span class="keyword">for</span> path <span class="keyword">in</span> S]) / I</span><br><span class="line"></span><br><span class="line"><span class="comment"># Results output</span></span><br><span class="line">print(<span class="string">&quot;European Option Value %7.3f&quot;</span> % C0)</span><br></pre></td></tr></table></figure>
+<h5 id="运用numpy库">运用Numpy库</h5>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Monte Carlo valuation of European call options with NumPy</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">np.random.seed(<span class="number">20000</span>)</span><br><span class="line">t0 = time()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Parameters</span></span><br><span class="line">S0 = <span class="number">100.</span>; K = <span class="number">105.</span>; T = <span class="number">1.0</span>; r = <span class="number">0.05</span>; sigma = <span class="number">0.2</span></span><br><span class="line">M = <span class="number">50</span>; dt = T / M; I = <span class="number">250000</span> * <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Simulating I paths with M time steps</span></span><br><span class="line">S = np.zeros((M + <span class="number">1</span>, I))</span><br><span class="line">S[<span class="number">0</span>] = S0</span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, M + <span class="number">1</span>):</span><br><span class="line">    z = np.random.standard_normal(I)  <span class="comment"># pseudorandom numbers</span></span><br><span class="line">    z -= z.mean()  <span class="comment"># corrects 1st moment</span></span><br><span class="line">    z /= z.std()  <span class="comment"># corrects 2nd moment</span></span><br><span class="line">    S[t] = S[t - <span class="number">1</span>] * np.exp((r - <span class="number">0.5</span> * sigma ** <span class="number">2</span>) * dt + sigma * math.sqrt(dt) * z)</span><br><span class="line">      <span class="comment"># vectorized operation per time step over all paths</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Calculating the Monte Carlo estimator</span></span><br><span class="line">C0 = math.exp(-r * T) * np.<span class="built_in">sum</span>(np.maximum(S[-<span class="number">1</span>] - K, <span class="number">0</span>)) / I</span><br><span class="line"></span><br><span class="line"><span class="comment"># Results output</span></span><br><span class="line">print(<span class="string">&quot;European Option Value %7.3f&quot;</span> % C0)</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:accelerator086@outlook.com">Accelerator</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://accelerator086.github.io/2019/01/17/Notes-for-Financial-Derivatives-6/">http://accelerator086.github.io/2019/01/17/Notes-for-Financial-Derivatives-6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://accelerator086.github.io" target="_blank">Accelerator086</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Financial-Mathematics/">Financial Mathematics</a><a class="post-meta__tags" href="/tags/Undergraduate/">Undergraduate</a><a class="post-meta__tags" href="/tags/Financial-Derivatives/">Financial Derivatives</a></div><div class="post_share"><div class="social-share" data-image="/pic/15888928.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/01/17/Notes-for-Financial-Derivatives-5/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Financial Derivatives Chapter 5：Preview-Stochastic Process</div></div></a></div><div class="next-post pull-right"><a href="/2018/12/04/Quantitative-Financial-Time-Series/"><img class="next-cover" src="/pic/time-series.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Quantitative Financial Time Series</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#introduction-to-the-b-s-formula-using-risk-neutral-method"><span class="toc-number">1.</span> <span class="toc-text">Introduction to the B-S Formula: Using Risk-Neutral Method</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E5%AF%BCb-s-formula"><span class="toc-number">1.1.</span> <span class="toc-text">推导B-S Formula：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#b-s-formula-%E6%8E%A8%E5%B9%BF"><span class="toc-number">2.</span> <span class="toc-text">B-S Formula 推广：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#european-put-option"><span class="toc-number">2.1.</span> <span class="toc-text">European put option：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A2%E5%8A%A8%E7%8E%87sigma%E8%AE%A1%E7%AE%97"><span class="toc-number">2.1.1.</span> <span class="toc-text">波动率\[\sigma\]计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%95%8C%E5%AE%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E6%A8%A1%E5%9E%8B%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-number">2.1.2.</span> <span class="toc-text">界定二叉树模型中的参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E7%A6%BB%E6%95%A3%E7%BA%A2%E5%88%A9%E7%9A%84%E6%AC%A7%E5%BC%8F%E6%9C%9F%E6%9D%83%E7%9A%84b-s%E5%85%AC%E5%BC%8F"><span class="toc-number">2.1.3.</span> <span class="toc-text">有离散红利的欧式期权的B-S公式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E8%BF%9E%E7%BB%AD%E7%BA%A2%E5%88%A9%E7%8E%87%E6%94%B6%E7%9B%8A%E7%9A%84%E6%AC%A7%E5%BC%8F%E8%82%A1%E7%A5%A8%E6%9C%9F%E6%9D%83%E7%9A%84b-s%E5%85%AC%E5%BC%8F%E6%AC%A7%E5%BC%8F%E8%82%A1%E7%A5%A8%E6%8C%87%E6%95%B0%E6%9C%9F%E6%9D%83%E5%AE%9A%E4%BB%B7%E5%85%AC%E5%BC%8F"><span class="toc-number">2.1.4.</span> <span class="toc-text">有连续红利率收益的欧式股票期权的B-S公式、欧式股票指数期权定价公式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E6%9B%BC%E7%A7%91%E5%B0%94%E5%93%88%E6%A0%B9%E5%A4%96%E6%B1%87%E6%9C%9F%E6%9D%83%E5%AE%9A%E4%BB%B7%E5%85%AC%E5%BC%8F"><span class="toc-number">2.1.5.</span> <span class="toc-text">加曼－科尔哈根外汇期权定价公式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%9F%E8%B4%A7%E6%9C%9F%E6%9D%83black%E5%AE%9A%E4%BB%B7%E6%A8%A1%E5%9E%8B1976"><span class="toc-number">2.1.6.</span> <span class="toc-text">期货期权——Black定价模型（1976）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#b-s-formula-using-it%C5%8D-lemma"><span class="toc-number">3.</span> <span class="toc-text">B-S Formula: Using Itō Lemma</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#b-s-formula-%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-number">4.</span> <span class="toc-text">B-S Formula 希腊字母的表示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%9F%E6%9D%83%E7%9A%84%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E5%85%84%E5%BC%9F%E4%BC%9A"><span class="toc-number">4.0.1.</span> <span class="toc-text">期权的希腊字母“兄弟会”：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%9F%E6%9D%83%E7%9A%84%E5%A5%97%E6%9C%9F%E4%BF%9D%E5%80%BC%E6%8A%80%E6%9C%AF%E5%AF%B9%E5%86%B2%E7%AD%96%E7%95%A5"><span class="toc-number">5.</span> <span class="toc-text">期权的套期保值技术、对冲策略</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A5%97%E6%9C%9F%E4%BF%9D%E5%80%BC%E6%AF%94%E7%8E%87"><span class="toc-number">5.0.1.</span> <span class="toc-text">套期保值比率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A5%97%E6%9C%9F%E4%BF%9D%E5%80%BC%E4%B8%AD%E6%80%A7%E6%8A%80%E6%9C%AF"><span class="toc-number">5.0.2.</span> <span class="toc-text">套期保值中性技术</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#delta%E4%B8%AD%E6%80%A7"><span class="toc-number">5.0.3.</span> <span class="toc-text">Delta中性：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gamma%E4%B8%AD%E6%80%A7"><span class="toc-number">5.0.4.</span> <span class="toc-text">Gamma中性：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vega%E4%B8%AD%E6%80%A7"><span class="toc-number">5.0.5.</span> <span class="toc-text">Vega中性：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A5%97%E6%9C%9F%E4%BF%9D%E5%80%BC%E7%8E%87"><span class="toc-number">5.0.6.</span> <span class="toc-text">套期保值率</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88%E4%BF%9D%E9%99%A9%E7%AD%96%E7%95%A5portfolio-insurance"><span class="toc-number">6.</span> <span class="toc-text">投资组合保险策略Portfolio Insurance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#black-scholes-formula-using-monte-carlo-method-valuation"><span class="toc-number">7.</span> <span class="toc-text">Black-Scholes Formula using Monte-Carlo Method: Valuation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#european-option"><span class="toc-number">7.1.</span> <span class="toc-text">European Option</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%A8%A1%E6%8B%9F%E6%96%B9%E6%B3%95"><span class="toc-number">7.1.1.</span> <span class="toc-text">静态模拟方法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E6%A8%A1%E6%8B%9F%E6%96%B9%E6%B3%95"><span class="toc-number">7.1.2.</span> <span class="toc-text">动态模拟方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%AFpython"><span class="toc-number">7.1.2.1.</span> <span class="toc-text">纯Python</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%90%E7%94%A8numpy%E5%BA%93"><span class="toc-number">7.1.2.2.</span> <span class="toc-text">运用Numpy库</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By Accelerator086</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
