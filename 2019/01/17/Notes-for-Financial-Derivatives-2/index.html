@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Financial Derivatives Chapter 2：An Introduction to Financial Derivatives | Accelerator086</title><meta name="keywords" content="Financial Mathematics,Undergraduate,Financial Derivatives"><meta name="author" content="Accelerator086"><meta name="copyright" content="Accelerator086"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="金融衍生工具 &amp; 金融定价分析 Chapter 2">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Financial Derivatives Chapter 2：An Introduction to Financial Derivatives | Accelerator086</title><meta name="keywords" content="Financial Mathematics,Financial Derivatives,Undergraduate"><meta name="author" content="Accelerator086"><meta name="copyright" content="Accelerator086"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="金融衍生工具 &amp; 金融定价分析 Chapter 2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Financial Derivatives Chapter 2：An Introduction to Financial Derivatives">
 <meta property="og:url" content="http://accelerator086.github.io/2019/01/17/Notes-for-Financial-Derivatives-2/index.html">
@@ -7,11 +7,11 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://accelerator086.github.io/pic/15888928.jpg">
 <meta property="article:published_time" content="2019-01-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-06-18T07:35:52.461Z">
+<meta property="article:modified_time" content="2021-11-12T10:26:18.713Z">
 <meta property="article:author" content="Accelerator086">
 <meta property="article:tag" content="Financial Mathematics">
-<meta property="article:tag" content="Undergraduate">
 <meta property="article:tag" content="Financial Derivatives">
+<meta property="article:tag" content="Undergraduate">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://accelerator086.github.io/pic/15888928.jpg"><link rel="shortcut icon" href="/pic/favicon.ico"><link rel="canonical" href="http://accelerator086.github.io/2019/01/17/Notes-for-Financial-Derivatives-2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="66hegKgJ6eDG2iMJfXA0YA4wnJNf6pvlCaWZOwOMk2k"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
@@ -59,7 +59,7 @@
   isHome: false,
   isHighlightShrink: true,
   isToc: true,
-  postUpdate: '2021-06-18 15:35:52'
+  postUpdate: '2021-11-12 18:26:18'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -146,45 +146,7 @@
     if (fontSizeVal !== undefined) {
       document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
     }
-    })(window)</script><style type="text/css">#toggle-sidebar {left:100px}</style><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/pic/15888928.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">39</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">32</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">17</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/selftalk/"><i class="fa-fw fas fa-heart"></i><span> Selftalk</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://blogwaline-alpha.vercel.app/ui"><i class="fa-fw fas fa-suitcase"></i><span> Backstage</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Accelerator086</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/selftalk/"><i class="fa-fw fas fa-heart"></i><span> Selftalk</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://blogwaline-alpha.vercel.app/ui"><i class="fa-fw fas fa-suitcase"></i><span> Backstage</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Financial Derivatives Chapter 2：An Introduction to Financial Derivatives</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-01-16T16:00:00.000Z" title="发表于 2019-01-17 00:00:00">2019-01-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-06-18T07:35:52.461Z" title="更新于 2021-06-18 15:35:52">2021-06-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Financial-Derivatives/">Financial Derivatives</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div><article class="post-content" id="article-container"><blockquote>
-<p>如下为英文维基百科、Investopedia、MBA智库百科的介绍：</p>
-<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Derivative_(finance)">Derivative (finance) 英文维基百科</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.investopedia.com/terms/d/derivative.asp">Derivatives Investopedia</a></p>
-<p><a target="_blank" rel="noopener" href="https://wiki.mbalib.com/wiki/%E9%87%91%E8%9E%8D%E8%A1%8D%E7%94%9F%E4%BA%A7%E5%93%81">金融衍生品 MBA智库百科</a></p>
-</blockquote>
-<blockquote>
-<p>建议阅读书目：</p>
-<p>《数量金融》（Paul Wilmott）Chapter 1-3</p>
-<p>《Options, Futures and Other Derivatives》8th edition Chapter 1 - 7</p>
-<p>《Mathematical Models of Financial Derivatives》</p>
-</blockquote>
-<h2 id="金融衍生品">金融衍生品</h2>
-<p><strong>金融衍生品</strong>是在未来某一时期以确定的价格买卖确定数量的某一资产的某种形式的合约。该类资产通常称为标的资产，标的物。</p>
-<p>金融衍生品分<strong>交易所市场</strong> （Exchange Market）和<strong>场外市场</strong> （Over-the-counter Market, OTC）。其中，衍生产品交易所诸如：</p>
-<ul>
-<li>芝加哥期货交易所：CME 集团
-<ul>
-<li>芝加哥交易所 CBOT</li>
-<li>芝加哥商品交易所 CME</li>
-<li>纽约商品交易所 New York Mercantile Exchange</li>
-</ul></li>
-<li>芝加哥期权交易所 CBOT</li>
-</ul>
-<p>场外市场存在做市商角色。</p>
-<p>尽管金融衍生品的品种千差万别，但都可以归结成<strong>远期</strong>（Forwards）、<strong>期权</strong>（Options）、<strong>期货</strong>（Futures）和<strong>互换</strong>（Swaps）等基础性的衍生品，以及由这四类金融衍生工具组合而成的结构性衍生品。</p>
-<p>金融衍生品基本特点:</p>
-<ul>
-<li>【<strong>零和博弈</strong>】（即合约交易的双方盈亏完全负相关，并且净损益为零）</li>
-<li>【<strong>高杠杆性</strong>】（金融衍生品的交易采用保证金制度(margin)）</li>
-<li>【<strong>表外交易</strong>】（许多金融衍生品交易在资产负债表上没有相应科目，因而也被称为“资产负债表外交易(简称表外交易)”）</li>
-</ul>
-<p>参与的交易员种类：</p>
-<ul>
-<li>【<strong>套期保值者</strong>(hedger) or <strong>对冲者</strong>】在一定时期内，根据管理目标，运用金融产品减少现有资产价格面临的风险</li>
-<li>【<strong>投机者 </strong>(speculator) 】主动在市场中持有某个头寸，或者预期价格上升，或者预期价格下降，接受风险，希望获得相应收益</li>
-<li>【<strong>套利者</strong> (arbitrageurs) 】利用时间和空间的价格差异，同时进入两个或更多个市场进行交易，以锁定一个无风险利润。</li>
-</ul>
-<h3 id="利率-interest-rate">利率 Interest Rate</h3>
+    })(window)</script><style type="text/css">#toggle-sidebar {left:100px}</style><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/pic/15888928.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">39</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">32</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">17</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/selftalk/"><i class="fa-fw fas fa-heart"></i><span> Selftalk</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://blogwaline-alpha.vercel.app/ui"><i class="fa-fw fas fa-suitcase"></i><span> Backstage</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Accelerator086</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/selftalk/"><i class="fa-fw fas fa-heart"></i><span> Selftalk</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://blogwaline-alpha.vercel.app/ui"><i class="fa-fw fas fa-suitcase"></i><span> Backstage</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Financial Derivatives Chapter 2：An Introduction to Financial Derivatives</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-01-16T16:00:00.000Z" title="发表于 2019-01-17 00:00:00">2019-01-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-11-12T10:26:18.713Z" title="更新于 2021-11-12 18:26:18">2021-11-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Financial-Derivatives/">Financial Derivatives</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div><article class="post-content" id="article-container"><h3 id="利率-interest-rate债券-bonds">利率 Interest Rate、债券 Bonds</h3>
 <h4 id="简单收益率年百分比收益率">简单收益率，年百分比收益率</h4>
 <p><span class="math display">\[
 R_{t} = \frac{P_{t} - P_{t-1}}{P_{t-1}}
@@ -235,10 +197,110 @@ P=\sum_{i=1}^n \frac{c_k}{(1+r)^i} + \frac{C}{(1+r)^n}
 <p>这部分内容详见 金融市场学 以及</p>
 <p>《Options, Futures and Other Derivatives》</p>
 <ul>
-<li>Chapter 4 Interest Rates</li>
+<li>Chapter 4 Interest Rates
+<ul>
+<li>对当前利率的应用、利率的简单计算做介绍</li>
+</ul></li>
+<li>Chapter 7 Swaps
+<ul>
+<li>对于第8版与后两版的利率上区别，后期引入隔夜指数互换OIS，详细解释LIBOR逐渐被替换的情况
+<ul>
+<li>在第9版中，新加入一章Chapter 9 OIS Discounting, Credit Issues, and Funding costs</li>
+<li>文献支持主要有：Sven Klingler, Olav Syrstad, Life after LIBOR, Journal of Financial Economics, Volume 141, Issue 2, 2021, Pages 783-801, ISSN 0304-405X.</li>
+</ul></li>
+</ul></li>
+<li>Chapter 28 Interest Rate Derivatives: the Standard Market Models</li>
+<li>Chapter 30 Interest Rate Derivatives: Models of the Short Rate</li>
+<li>Chapter 31 Interest Rate Derivatives: HJM and LMM</li>
+</ul>
+<p>FRM《3 Financial Markets and Products》</p>
+<ul>
+<li>Chapter 9 Foreign Exchange Markets 汇率市场的一些概念</li>
+<li>Chapter 16 Properties of Interests 利率的一些概念</li>
+<li>Chapter 17 Corporate Bonds 债券的一些概念</li>
+</ul>
+<p>FRM《4 Valuation and Risk Models》主要是利率在债券中的定价，以及利率定价的工具，这部分是利率的重点</p>
+<ul>
+<li>Chapter 9 Pricing Conventions, Discounting, and Arbitrage 债券的一些概念</li>
+<li>Chapter 10 Interest Rates 利率的一些概念</li>
+<li>Chapter 11 Bond Yields and Return Calculations 债券的一些概念</li>
+<li>Chapter 12 Applying Duration, Convexity and DV01 久期、凸性、DV01</li>
+<li>Chapter 13 Modeling Non-Parallel Term Structure Shifts and Hedging</li>
+</ul>
+<p>《An Elementary Introduction to Mathematical Finance》</p>
+<ul>
+<li>Chapter 4 Interest Rates and Present Value Analysis 从数学计算角度介绍利率</li>
+</ul>
+<p>《数量金融》（Paul Wilmott）</p>
+<ul>
+<li>Chapter 13 固定收益产品和分析：收益率、久期和凸性</li>
+<li>第三部分 固定收益的建模和衍生品</li>
+</ul>
+<p>《Mathematical Models of Financial Derivatives》</p>
+<ul>
+<li>Chapter 7 Interest Rate Models and Bond Pricing</li>
+<li>Chapter 8 Interest Rate Derivatives: Bond Options, LIBOR and Swap Products</li>
+</ul>
+<p>《The Mathematics for Finance: Modeling and Hedging》</p>
+<ul>
+<li>Chapter 8 Bond Models and Interest Rate Options</li>
+<li>Chapter 10 Currency Markets and Foreign Exchange Risks</li>
 </ul>
 </blockquote>
-<h3 id="标准衍生品的发展历史">标准衍生品的发展历史</h3>
+<h2 id="金融衍生品">金融衍生品</h2>
+<blockquote>
+<p>如下为英文维基百科、Investopedia、MBA智库百科的介绍：</p>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Derivative_(finance)">Derivative (finance) 英文维基百科</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.investopedia.com/terms/d/derivative.asp">Derivatives Investopedia</a></p>
+<p><a target="_blank" rel="noopener" href="https://wiki.mbalib.com/wiki/%E9%87%91%E8%9E%8D%E8%A1%8D%E7%94%9F%E4%BA%A7%E5%93%81">金融衍生品 MBA智库百科</a></p>
+</blockquote>
+<blockquote>
+<p>建议阅读书目：</p>
+<p>《数量金融》（Paul Wilmott）</p>
+<ul>
+<li>Chapter 1 产品与市场</li>
+<li>Chapter 2 衍生品</li>
+</ul>
+<p>《Options, Futures and Other Derivatives》</p>
+<ul>
+<li>Chapter 1 Introduction</li>
+</ul>
+<p>《Mathematical Models of Financial Derivatives》</p>
+<ul>
+<li>Chapter 1 Introduction to Derivative Instruments</li>
+</ul>
+<p>FRM《3 Financial Markets and Products》</p>
+<ul>
+<li>Chapter 4 Introduction to Derivatives</li>
+<li>Chapter 5 Exchanges and OTC Markets</li>
+<li>Chapter 6 Central Cleaning</li>
+</ul>
+</blockquote>
+<p><strong>金融衍生品</strong>是在未来某一时期以确定的价格买卖确定数量的某一资产的某种形式的合约。该类资产通常称为标的资产，标的物。</p>
+<p>金融衍生品分<strong>交易所市场</strong> （Exchange Market）和<strong>场外市场</strong> （Over-the-counter Market, OTC）。其中，衍生产品交易所诸如：</p>
+<ul>
+<li>芝加哥期货交易所：CME 集团
+<ul>
+<li>芝加哥交易所 CBOT</li>
+<li>芝加哥商品交易所 CME</li>
+<li>纽约商品交易所 New York Mercantile Exchange</li>
+</ul></li>
+<li>芝加哥期权交易所 CBOT</li>
+</ul>
+<p>场外市场存在做市商角色。</p>
+<p>尽管金融衍生品的品种千差万别，但都可以归结成<strong>远期</strong>（Forwards）、<strong>期权</strong>（Options）、<strong>期货</strong>（Futures）和<strong>互换</strong>（Swaps）等基础性的衍生品，以及由这四类金融衍生工具组合而成的结构性衍生品。</p>
+<p>金融衍生品基本特点:</p>
+<ul>
+<li>【<strong>零和博弈</strong>】（即合约交易的双方盈亏完全负相关，并且净损益为零）</li>
+<li>【<strong>高杠杆性</strong>】（金融衍生品的交易采用保证金制度(margin)）</li>
+<li>【<strong>表外交易</strong>】（许多金融衍生品交易在资产负债表上没有相应科目，因而也被称为“资产负债表外交易(简称表外交易)”）</li>
+</ul>
+<p>参与的交易员种类：</p>
+<ul>
+<li>【<strong>套期保值者</strong>(hedger) or <strong>对冲者</strong>】在一定时期内，根据管理目标，运用金融产品减少现有资产价格面临的风险</li>
+<li>【<strong>投机者 </strong>(speculator) 】主动在市场中持有某个头寸，或者预期价格上升，或者预期价格下降，接受风险，希望获得相应收益</li>
+<li>【<strong>套利者</strong> (arbitrageurs) 】利用时间和空间的价格差异，同时进入两个或更多个市场进行交易，以锁定一个无风险利润。</li>
+</ul>
 <h3 id="远期-forward">远期 Forward</h3>
 <p><strong>远期</strong>：指交易双方在将来某个确定的时刻按确定的价格购买或出售一定数量的某种资产（金融资产或商品）而签订的合约。远期合约存在于 OTC 市场，主要是金融机构之间或者金融机构与其客户之间。其中：</p>
 <ul>
@@ -259,12 +321,21 @@ P=\sum_{i=1}^n \frac{c_k}{(1+r)^i} + \frac{C}{(1+r)^n}
 <li>金融期货：利率期货、外汇期货、股指期货。</li>
 </ul>
 <blockquote>
+<p>建议阅读书目：</p>
 <p>《Options, Futures and Other Derivatives》</p>
 <ul>
-<li>Chapter 2 Mechanics of futures markets</li>
-<li>Chapter 3 Hedging strategies using futures</li>
-<li>Chapter 5 Determination of forward and futures prices</li>
-<li>Chapter 6 Interest rate futures</li>
+<li>Chapter 2 Mechanics of Futures Markets</li>
+<li>Chapter 3 Hedging Strategies Using Futures</li>
+<li>Chapter 5 Determination of Forward and Futures Prices</li>
+<li>Chapter 6 Interest Rate Futures 利率期货部分</li>
+</ul>
+<p>FRM《3 Financial Markets and Products》</p>
+<ul>
+<li>Chapter 7 Futures Markets</li>
+<li>Chapter 8 Using Futures for Hedging</li>
+<li>Chapter 10 Pricing Financial Forwards and Futures</li>
+<li>Chapter 11 Commodity Forwards and Futures</li>
+<li>Chapter 19 Interest Rate Futures</li>
 </ul>
 </blockquote>
 <h3 id="套期保值对冲-hedging">套期保值：对冲 Hedging</h3>
@@ -289,12 +360,47 @@ P=\sum_{i=1}^n \frac{c_k}{(1+r)^i} + \frac{C}{(1+r)^n}
 <li>奇异期权：障碍期权、回望期权、亚式期权、百慕大期权……</li>
 <li>实物期权：期权定价技术在公司财务上的应用，特别对于公司的资本预算和投资决策。是做出新决策或修正前期决策的期权。</li>
 </ul>
+<blockquote>
+<p>建议阅读书目：</p>
+<p>《Options, Futures and Other Derivatives》</p>
+<ul>
+<li>Chapter 9 Mechanics of Options Markets</li>
+<li>Chapter 10 Properties of Stock Options</li>
+<li>Chapter 11 Trading Strategies Involving Options</li>
+<li>Chapter 14 Employee Stock Options 雇员股票期权当前比较盛行，尤其是在大公司里</li>
+<li>Chapter 15 Options on Stock Indices and Currencies</li>
+<li>Chapter 16 Futures Options</li>
+<li>Chapter 25 Exotic Options</li>
+<li>Chapter 34 Real Options</li>
+</ul>
+<p>FRM《3 Financial Markets and Products》</p>
+<ul>
+<li>Chapter 12 Options Markets</li>
+<li>Chapter 13 Properties of Options</li>
+<li>Chapter 14 Trading Strategies</li>
+<li>Chapter 15 Exotic Options</li>
+</ul>
+<p>《Mathematical Models of Financial Derivatives》</p>
+<ul>
+<li>Chapter 4 Path Dependent Options</li>
+<li>Chapter 5 American Options</li>
+</ul>
+</blockquote>
 <h3 id="互换-swap">互换 Swap</h3>
 <blockquote>
+<p>建议阅读书目：</p>
 <p>《Options, Futures and Other Derivatives》</p>
 <ul>
 <li>Chapter 7 Swaps</li>
 <li>Chapter 32 Swaps Revisited</li>
+</ul>
+<p>《数量金融》（Paul Wilmott）</p>
+<ul>
+<li>Chapter 14 互换</li>
+</ul>
+<p>FRM《3 Financial Markets and Products》</p>
+<ul>
+<li>Chapter 20 Swaps</li>
 </ul>
 </blockquote>
 <h3 id="我国著名的期权期货产品">我国著名的期权、期货产品</h3>
@@ -339,10 +445,16 @@ P=\sum_{i=1}^n \frac{c_k}{(1+r)^i} + \frac{C}{(1+r)^n}
 <p>《Options, Futures and Other Derivatives》</p>
 <ul>
 <li>Chapter 8 Securitization and the credit crisis of 2007</li>
+<li>Chapter 35 Derivatives Mishaps and What We can Learn from Them</li>
+</ul>
+<p>FRM《1 Foundations of Risk Managements》</p>
+<ul>
+<li>Chapter 9 Learning from Financial Disasters</li>
+<li>Chapter 10 Anatomy of the Great Financial Crisis of 2007-2009</li>
 </ul>
 </blockquote></li>
 </ul>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:accelerator086@outlook.com">Accelerator</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://accelerator086.github.io/2019/01/17/Notes-for-Financial-Derivatives-2/">http://accelerator086.github.io/2019/01/17/Notes-for-Financial-Derivatives-2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 许可协议。转载请注明来自 <a href="http://accelerator086.github.io" target="_blank">Accelerator086</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Financial-Mathematics/">Financial Mathematics</a><a class="post-meta__tags" href="/tags/Undergraduate/">Undergraduate</a><a class="post-meta__tags" href="/tags/Financial-Derivatives/">Financial Derivatives</a></div><div class="post_share"><div class="social-share" data-image="/pic/15888928.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/01/17/Notes-for-Financial-Derivatives-3/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Financial Derivatives Chapter 3：Non-arbitrary Pricing Theory</div></div></a></div><div class="next-post pull-right"><a href="/2019/01/17/Notes-for-Financial-Derivatives-5/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Financial Derivatives Chapter 5：Preview-Stochastic Process</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%91%E8%9E%8D%E8%A1%8D%E7%94%9F%E5%93%81"><span class="toc-number">1.</span> <span class="toc-text">金融衍生品</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%8E%87-interest-rate"><span class="toc-number">1.1.</span> <span class="toc-text">利率 Interest Rate</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%94%B6%E7%9B%8A%E7%8E%87%E5%B9%B4%E7%99%BE%E5%88%86%E6%AF%94%E6%94%B6%E7%9B%8A%E7%8E%87"><span class="toc-number">1.1.1.</span> <span class="toc-text">简单收益率，年百分比收益率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E6%94%B6%E7%9B%8A%E7%8E%87"><span class="toc-number">1.1.2.</span> <span class="toc-text">对数收益率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%94%B6%E7%9B%8A%E7%8E%87%E4%B8%8E%E5%AF%B9%E6%95%B0%E6%94%B6%E7%9B%8A%E7%8E%87%E4%BA%92%E6%8D%A2"><span class="toc-number">1.1.3.</span> <span class="toc-text">简单收益率与对数收益率互换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%A4%8D%E5%88%A9"><span class="toc-number">1.1.4.</span> <span class="toc-text">连续复利</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#the-doubling-rule"><span class="toc-number">1.1.5.</span> <span class="toc-text">The Doubling Rule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E6%81%AF%E7%8E%87"><span class="toc-number">1.1.6.</span> <span class="toc-text">利息率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%80%BA%E5%88%B8%E7%9A%84%E5%AE%9A%E4%BB%B7%E5%85%AC%E5%BC%8F"><span class="toc-number">1.1.7.</span> <span class="toc-text">债券的定价公式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E8%A1%8D%E7%94%9F%E5%93%81%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2"><span class="toc-number">1.2.</span> <span class="toc-text">标准衍生品的发展历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E6%9C%9F-forward"><span class="toc-number">1.3.</span> <span class="toc-text">远期 Forward</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%9F%E8%B4%A7-future"><span class="toc-number">1.4.</span> <span class="toc-text">期货 Future</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A5%97%E6%9C%9F%E4%BF%9D%E5%80%BC%E5%AF%B9%E5%86%B2-hedging"><span class="toc-number">1.5.</span> <span class="toc-text">套期保值：对冲 Hedging</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%9F%E6%9D%83-option"><span class="toc-number">1.6.</span> <span class="toc-text">期权 Option</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%92%E6%8D%A2-swap"><span class="toc-number">1.7.</span> <span class="toc-text">互换 Swap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E5%9B%BD%E8%91%97%E5%90%8D%E7%9A%84%E6%9C%9F%E6%9D%83%E6%9C%9F%E8%B4%A7%E4%BA%A7%E5%93%81"><span class="toc-number">1.8.</span> <span class="toc-text">我国著名的期权、期货产品</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%91%E8%9E%8D%E8%A1%8D%E7%94%9F%E5%93%81%E4%BA%8B%E4%BB%B6"><span class="toc-number">1.9.</span> <span class="toc-text">金融衍生品事件</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By Accelerator086</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:accelerator086@outlook.com">Accelerator</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://accelerator086.github.io/2019/01/17/Notes-for-Financial-Derivatives-2/">http://accelerator086.github.io/2019/01/17/Notes-for-Financial-Derivatives-2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 许可协议。转载请注明来自 <a href="http://accelerator086.github.io" target="_blank">Accelerator086</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Financial-Mathematics/">Financial Mathematics</a><a class="post-meta__tags" href="/tags/Financial-Derivatives/">Financial Derivatives</a><a class="post-meta__tags" href="/tags/Undergraduate/">Undergraduate</a></div><div class="post_share"><div class="social-share" data-image="/pic/15888928.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/01/17/Notes-for-Financial-Derivatives-1/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Financial Derivatives Chapter 1：An Introduction to Financial Asset Pricing</div></div></a></div><div class="next-post pull-right"><a href="/2019/01/17/Notes-for-Financial-Derivatives-3/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Financial Derivatives Chapter 3：Non-arbitrary Pricing Theory</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%8E%87-interest-rate%E5%80%BA%E5%88%B8-bonds"><span class="toc-number">1.</span> <span class="toc-text">利率 Interest Rate、债券 Bonds</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%94%B6%E7%9B%8A%E7%8E%87%E5%B9%B4%E7%99%BE%E5%88%86%E6%AF%94%E6%94%B6%E7%9B%8A%E7%8E%87"><span class="toc-number">1.1.</span> <span class="toc-text">简单收益率，年百分比收益率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E6%94%B6%E7%9B%8A%E7%8E%87"><span class="toc-number">1.2.</span> <span class="toc-text">对数收益率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%94%B6%E7%9B%8A%E7%8E%87%E4%B8%8E%E5%AF%B9%E6%95%B0%E6%94%B6%E7%9B%8A%E7%8E%87%E4%BA%92%E6%8D%A2"><span class="toc-number">1.3.</span> <span class="toc-text">简单收益率与对数收益率互换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%A4%8D%E5%88%A9"><span class="toc-number">1.4.</span> <span class="toc-text">连续复利</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#the-doubling-rule"><span class="toc-number">1.5.</span> <span class="toc-text">The Doubling Rule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E6%81%AF%E7%8E%87"><span class="toc-number">1.6.</span> <span class="toc-text">利息率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%80%BA%E5%88%B8%E7%9A%84%E5%AE%9A%E4%BB%B7%E5%85%AC%E5%BC%8F"><span class="toc-number">1.7.</span> <span class="toc-text">债券的定价公式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%91%E8%9E%8D%E8%A1%8D%E7%94%9F%E5%93%81"><span class="toc-number"></span> <span class="toc-text">金融衍生品</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E6%9C%9F-forward"><span class="toc-number">1.</span> <span class="toc-text">远期 Forward</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%9F%E8%B4%A7-future"><span class="toc-number">2.</span> <span class="toc-text">期货 Future</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A5%97%E6%9C%9F%E4%BF%9D%E5%80%BC%E5%AF%B9%E5%86%B2-hedging"><span class="toc-number">3.</span> <span class="toc-text">套期保值：对冲 Hedging</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%9F%E6%9D%83-option"><span class="toc-number">4.</span> <span class="toc-text">期权 Option</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%92%E6%8D%A2-swap"><span class="toc-number">5.</span> <span class="toc-text">互换 Swap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E5%9B%BD%E8%91%97%E5%90%8D%E7%9A%84%E6%9C%9F%E6%9D%83%E6%9C%9F%E8%B4%A7%E4%BA%A7%E5%93%81"><span class="toc-number">6.</span> <span class="toc-text">我国著名的期权、期货产品</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%91%E8%9E%8D%E8%A1%8D%E7%94%9F%E5%93%81%E4%BA%8B%E4%BB%B6"><span class="toc-number">7.</span> <span class="toc-text">金融衍生品事件</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By Accelerator086</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
